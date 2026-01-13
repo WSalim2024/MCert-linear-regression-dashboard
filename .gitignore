@@ -1,0 +1,15 @@
+# Virtual Environments
+venv/
+env/
+.env
+
+# PyCharm Settings
+.idea/
+
+# Python compiled files
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
+Thumbs.db
