@@ -1,15 +1,37 @@
-# Virtual Environments
-venv/
-env/
-.env
-
-# PyCharm Settings
-.idea/
-
-# Python compiled files
+# --- Python Standards ---
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
 
-# System files
-.DS_Store
-Thumbs.db
+# --- Distribution / Packaging ---
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Jupyter Notebooks (if you add them later) ---
+.ipynb_checkpoints
+
+# --- IDE Settings ---
+.idea/
+.vscode/
+*.swp
+
+# --- Streamlit ---
+.streamlit/

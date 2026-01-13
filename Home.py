@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 st.title("🧠 The Machine Learning Workbench")
-st.markdown("### v2.0 - Enterprise Edition")
+st.markdown("### v3.0 - Enterprise Edition")
 
 st.markdown(
     """
@@ -21,14 +21,19 @@ st.markdown(
     ### 📂 Available Modules
 
     #### 1. [Linear Regression (Real Estate)](/Linear_Regression)
-    * **Core Concept:** Prediction of continuous values.
-    * **The "What":** Predicting house prices based on square footage.
-    * **Key Metric:** $R^2$ (Accuracy) & MSE (Error).
+    * **Type:** Regression (Continuous)
+    * **Use Case:** Predicting house prices.
+    * **Core Math:** $y = mx + b$
 
     #### 2. [Logistic Regression (Student Success)](/Logistic_Regression)
-    * **Core Concept:** Binary Classification (Probability).
-    * **The "What":** Predicting if a student passes based on study hours.
-    * **Key Metric:** Confusion Matrix & Sigmoid Probability.
+    * **Type:** Classification (Binary)
+    * **Use Case:** Pass/Fail Probability.
+    * **Core Math:** Sigmoid Function (S-Curve).
+
+    #### 3. [Decision Tree (Exam Classifier)](/Decision_Tree)
+    * **Type:** Non-Linear Classification
+    * **Use Case:** Complex decision rules.
+    * **Core Math:** Gini Impurity & Entropy (Tree Splitting).
 
     ---
 
