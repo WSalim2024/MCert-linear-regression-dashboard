@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 st.title("🧠 The Machine Learning Workbench")
-st.markdown("### v3.1 - Comparison Update")
+st.markdown("### v3.2 - Reliability Update")
 st.markdown("""
 > **System Status:** Online 🟢
 
@@ -17,18 +17,24 @@ Welcome to the centralized portfolio for Machine Learning algorithms.
 
 ### 📂 Learning Modules
 
-#### 1. [Linear Regression](/Linear_Regression) (Real Estate)
-* Prediction of continuous values ($y=mx+b$).
+#### 1. [Linear Regression](/Linear_Regression)
+* Prediction of continuous values.
 
-#### 2. [Logistic Regression](/Logistic_Regression) (Probability)
-* Binary classification using probabilities (S-Curve).
+#### 2. [Logistic Regression](/Logistic_Regression)
+* Binary classification (Probability).
 
-#### 3. [Decision Tree](/Decision_Tree) (Rules)
-* Non-linear classification using decision rules.
+#### 3. [Decision Tree](/Decision_Tree)
+* Non-linear classification (Rules).
 
 ### ⚔️ Analysis Modules
 
-#### 4. [Model Showdown](/Model_Comparison) (New!)
-* **The Arena:** Compare Logistic Regression vs. Decision Trees side-by-side.
-* **The Goal:** Visualize how different algorithms "see" the same data differently.
+#### 4. [Model Showdown](/Model_Comparison)
+* **Compare:** Linear vs. Non-Linear boundaries side-by-side.
+
+#### 5. [Cross-Validation Lab](/Cross_Validation) (New!)
+* **Audit:** Test model reliability using K-Fold Cross-Validation.
+* **Metrics:** F1-Score, R² Averaging, and Stability Testing.
+
+---
+*Created by [Your Name]*
 """)

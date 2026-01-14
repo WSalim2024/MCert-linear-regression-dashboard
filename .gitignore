@@ -15,19 +15,9 @@ venv/
 
 # --- Streamlit ---
 .streamlit/secrets.toml
-.streamlit/config.toml  # Optional: Keep if you want to share config, ignore if local only
-
-# --- Distribution & Build ---
-build/
-dist/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# --- OS Generated Files ---
-.DS_Store
-Thumbs.db
+# Keep config.toml if you want to share theme settings
 
 # --- Data & Logs ---
 *.log
-*.csv  # If you export any data locally
+*.csv
+.DS_Store
