@@ -1,4 +1,4 @@
-# --- Python Standards ---
+# --- Python & Virtual Environment ---
 __pycache__/
 *.pyc
 *.pyo
@@ -8,30 +8,26 @@ env/
 venv/
 .env
 
-# --- Distribution / Packaging ---
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# --- Jupyter Notebooks (if you add them later) ---
-.ipynb_checkpoints
-
-# --- IDE Settings ---
+# --- PyCharm & IDE Settings ---
 .idea/
 .vscode/
 *.swp
 
 # --- Streamlit ---
-.streamlit/
+.streamlit/secrets.toml
+.streamlit/config.toml  # Optional: Keep if you want to share config, ignore if local only
+
+# --- Distribution & Build ---
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+
+# --- Data & Logs ---
+*.log
+*.csv  # If you export any data locally

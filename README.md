@@ -1,103 +1,114 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/Version-3.0_Enterprise-blueviolet?style=for-the-badge" alt="Version"/>
-  <img src="https://img.shields.io/badge/Status-Production_Stable-brightgreen?style=for-the-badge" alt="Status"/>
-  <img src="https://img.shields.io/badge/Architecture-Multi--Module-orange?style=for-the-badge" alt="Architecture"/>
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
-  <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly"/>
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License"/>
-</p>
+# 🧠 The Machine Learning Workbench
 
-<h1 align="center">🧠 The Machine Learning Workbench</h1>
-<h3 align="center">Enterprise Algorithm Cockpit • Version 3.0</h3>
+### **Version 3.1 — The Algorithm Cockpit**
 
-<p align="center">
-  <em>Demystifying the "Black Box" of Artificial Intelligence through Interactive Visualization</em>
-</p>
+*An Interactive Educational Platform for Visualizing Machine Learning Decision Logic*
 
 ---
 
-[![GitHub](https://img.shields.io/badge/GitHub-WSalim2024-181717?style=flat-square&logo=github)](https://github.com/WSalim2024)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3+-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-5.18+-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+
+<br>
+
+[**Explore Features**](#-key-features) · [**Quick Start**](#-installation-and-setup) · [**User Guide**](#-user-guide) · [**Architecture**](#-technical-architecture)
+
+<br>
+
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px" alt="decorative divider"/>
+
+</div>
 
 ---
 
 ## 📋 Table of Contents
 
-- [Executive Overview](#-executive-overview)
-- [What's New in Version 3.0](#-whats-new-in-version-30)
-- [Project Architecture](#-project-architecture)
-- [Module Breakdown](#-module-breakdown)
-  - [Module A: Real Estate Estimator](#-module-a-real-estate-estimator-linear-regression)
-  - [Module B: Student Success Predictor](#-module-b-student-success-predictor-logistic-regression)
-  - [Module C: Exam Classifier](#-module-c-exam-classifier-decision-tree)
-- [Technical Stack](#-technical-stack)
-- [System Requirements](#-system-requirements)
-- [Installation & Setup](#-installation--setup)
-- [Launching the Application](#-launching-the-application)
-- [User Guide & Interpretation](#-user-guide--interpretation)
-- [Hyperparameter Tuning Deep Dive](#-hyperparameter-tuning-deep-dive)
-- [Performance Optimization](#-performance-optimization)
-- [Troubleshooting](#-troubleshooting)
-- [Disclaimer](#-disclaimer)
-- [Roadmap](#-roadmap)
-- [Author](#-author)
+<details>
+<summary><strong>Click to Expand Navigation</strong></summary>
+
+1. [Overview](#-overview)
+2. [Key Features](#-key-features)
+3. [What This Project Is About](#-what-this-project-is-about)
+4. [What It Does](#-what-it-does)
+5. [What Is the Logic](#-what-is-the-logic)
+6. [How Does It Work](#-how-does-it-work)
+7. [What Are the Requirements](#-what-are-the-requirements)
+8. [Technical Architecture](#-technical-architecture)
+9. [Model Specifications](#-model-specifications)
+10. [Tech Stack](#-tech-stack)
+11. [Install Dependencies](#-install-dependencies)
+12. [Installation and Setup](#-installation-and-setup)
+13. [Launching the Cockpit](#-launching-the-cockpit)
+14. [User Guide](#-user-guide)
+15. [Restrictions and Limitations](#-restrictions-and-limitations)
+16. [Disclaimer](#-disclaimer)
+17. [Author](#-author)
+
+</details>
 
 ---
 
-## 🎯 Executive Overview
+## 🚀 Overview
 
-The **Machine Learning Workbench** is a professional-grade portfolio application engineered to demystify the "Black Box" of Artificial Intelligence. Built with enterprise scalability in mind, this platform transcends static code execution by providing an interactive **Algorithm Cockpit** where users can observe machine learning models in action.
+**The Machine Learning Workbench v3.1** represents a significant leap forward in interactive machine learning education. This release introduces the **Algorithm Cockpit** — a unified command center where aspiring data scientists and seasoned practitioners alike can explore, experiment, and truly *understand* the decision-making processes of fundamental ML algorithms.
 
-### Core Value Proposition
+> **🎯 Release Highlights — Version 3.1**
+> 
+> This is a **Multipage Streamlit Application** architected as an interactive educational tool. Unlike static tutorials or passive video content, the Workbench places the learner in the pilot's seat, enabling real-time manipulation of model parameters while observing immediate visual feedback.
 
-This application empowers users to:
+### What's New in v3.1
 
-| Capability | Description |
-|:-----------|:------------|
-| **🎲 Generate Synthetic Data** | Create real-time datasets to simulate various market conditions and behavioral patterns |
-| **🧠 Train Industry-Standard Models** | Leverage Scikit-Learn's battle-tested algorithms with zero configuration |
-| **📊 Visualize Decision Boundaries** | Develop deep intuitive understanding of how machines "learn" to distinguish patterns |
-| **⚙️ Tune Hyperparameters** | Experiment with model complexity to understand overfitting and underfitting |
-
-### Target Audience
-
-- **Data Science Students** seeking hands-on understanding of ML fundamentals
-- **Business Analysts** requiring intuition about algorithmic decision-making
-- **Software Engineers** transitioning into machine learning roles
-- **Educators** demonstrating ML concepts in academic settings
-- **Technical Recruiters** evaluating candidate portfolio projects
+| Feature | Description |
+|---------|-------------|
+| 🆕 **Model Showdown Mode** | Side-by-side algorithm comparison arena |
+| ⚡ **Enhanced Real-time Training** | Sub-second model updates with optimized caching |
+| 🎨 **Refined Visualizations** | Plotly-powered interactive decision boundaries |
+| 📊 **Extended Metrics Dashboard** | Comprehensive performance analytics |
 
 ---
 
-## 🆕 What's New in Version 3.0
+## ✨ Key Features
 
 <table>
 <tr>
 <td width="50%">
 
-### ✨ New Features
-
-- **🌳 Decision Tree Classifier** — Non-linear classification with visual tree diagrams
-- **⚙️ Hyperparameter Tuning Panel** — Real-time Max Depth adjustment
-- **🎨 Decision Surface Visualization** — Rectangular boundary regions
-- **📈 Enhanced Metrics Dashboard** — Gini Impurity and Entropy displays
-- **🔄 Hot-Reload Architecture** — Add new modules without refactoring
+### 🔄 Real-time Training
+- **Instant Model Updates** — Adjust parameters and watch models retrain in milliseconds
+- **Live Loss Curves** — Observe convergence behavior as it happens
+- **Dynamic Coefficient Display** — See weights and biases update in real-time
 
 </td>
 <td width="50%">
 
-### 🔧 Improvements
+### 🎲 Synthetic Data Generation
+- **Configurable Noise Levels** — From pristine to chaotic datasets
+- **Adjustable Sample Sizes** — Scale from 50 to 1000+ observations
+- **Multiple Distribution Patterns** — Linear, clustered, and non-linear configurations
 
-- **⚡ 40% Faster Model Training** — Optimized data pipeline
-- **🖼️ Upgraded Plotly Charts** — Smoother zoom and pan interactions
-- **📱 Responsive Sidebar** — Better mobile experience
-- **🧹 Code Refactoring** — PEP-8 compliant codebase
-- **📚 Comprehensive Documentation** — This README!
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### ⚔️ Model Showdown Mode
+- **Head-to-Head Comparisons** — Pit algorithms against each other
+- **Unified Test Sets** — Fair evaluation on identical data
+- **Performance Metrics Grid** — MSE, Accuracy, F1-Score side-by-side
+
+</td>
+<td width="50%">
+
+### 📈 Interactive Visualizations
+- **Decision Boundary Mapping** — See where models draw the line
+- **Regression Line Overlays** — Visualize best-fit predictions
+- **Confidence Regions** — Understand prediction uncertainty
 
 </td>
 </tr>
@@ -105,1004 +116,954 @@ This application empowers users to:
 
 ---
 
-## 🏗️ Project Architecture
+## 🎓 What This Project Is About
 
-The application implements a **Modular Monolith** pattern using the Streamlit Multipage framework. This architectural decision ensures horizontal scalability—new algorithms can be hot-plugged as distinct modules without refactoring the core navigation logic.
+<div align="center">
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│    📚 THEORY          →        🔧 CODE         →      💡 INSIGHT   │
+│                                                                 │
+│   Mathematical        Implemented           Visual              │
+│   Foundations         Algorithms            Understanding       │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+The Machine Learning Workbench exists to **bridge the formidable gap between theoretical knowledge and practical implementation**. In academic settings, students often encounter machine learning as a series of equations on a whiteboard — elegant, abstract, and frustratingly disconnected from the messy reality of actual data.
+
+This project serves as that critical translation layer:
+
+- **For Students**: Transform abstract concepts into tangible, manipulable experiments
+- **For Educators**: Provide a ready-made demonstration platform for classroom use
+- **For Professionals**: Offer a rapid prototyping environment for algorithm intuition
+- **For the Curious**: Demystify the "magic" behind AI predictions
+
+> *"I hear and I forget. I see and I remember. I do and I understand."*
+> — Confucius (and every frustrated ML student ever)
+
+The Workbench embodies this philosophy by making machine learning a **participatory experience** rather than a spectator sport.
+
+---
+
+## 🔍 What It Does
+
+At its core, the Machine Learning Workbench **visualizes the "Black Box" of AI logic** — transforming opaque mathematical operations into intuitive visual representations.
+
+### Visualization Capabilities
+
+<table>
+<tr>
+<th>Algorithm</th>
+<th>Visualization Type</th>
+<th>What You'll See</th>
+</tr>
+<tr>
+<td><strong>Linear Regression</strong></td>
+<td>📈 Regression Lines</td>
+<td>The best-fit line slicing through your scattered data points, showing the optimal linear relationship <code>y = mx + b</code></td>
+</tr>
+<tr>
+<td><strong>Logistic Regression</strong></td>
+<td>📉 Sigmoid Curves</td>
+<td>The characteristic S-shaped probability curve, transitioning smoothly from 0 to 1 as it separates classes</td>
+</tr>
+<tr>
+<td><strong>Decision Tree</strong></td>
+<td>🗺️ Decision Boundaries</td>
+<td>Rectangular partition regions carved into the feature space, each painted with its predicted class</td>
+</tr>
+</table>
+
+### The Visualization Pipeline
+
+```
+┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+│              │    │              │    │              │    │              │
+│  RAW DATA    │───▶│   TRAINED    │───▶│  PREDICTION  │───▶│  RENDERED    │
+│  POINTS      │    │   MODEL      │    │  SURFACE     │    │  VISUAL      │
+│              │    │              │    │              │    │              │
+└──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
+     📊                  🧠                   🗺️                  🎨
+```
+
+**What was once hidden becomes visible:**
+- Watch a linear regression "learn" where to place its line
+- Observe how logistic regression calculates probability scores
+- See decision trees carve out their rectangular kingdoms
+
+---
+
+## 🧮 What Is the Logic
+
+Understanding the mathematical foundations transforms users from button-pushers into informed practitioners. Here's the theory powering each model:
+
+### 📐 Linear Regression — Ordinary Least Squares (OLS)
+
+The foundational algorithm seeks to minimize the **sum of squared residuals** between predictions and actual values.
+
+**Objective Function:**
+
+$$\min_{\beta} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \min_{\beta} \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1 x_i)^2$$
+
+| Symbol | Meaning |
+|--------|---------|
+| $y_i$ | Actual observed value |
+| $\hat{y}_i$ | Predicted value |
+| $\beta_0$ | Intercept (y-axis crossing) |
+| $\beta_1$ | Slope (rate of change) |
+
+**Closed-Form Solution:**
+
+$$\hat{\beta} = (X^TX)^{-1}X^Ty$$
+
+---
+
+### 📊 Logistic Regression — The Sigmoid Function
+
+For binary classification, we need probabilities bounded between 0 and 1. The **sigmoid function** provides this transformation.
+
+**Sigmoid Transformation:**
+
+$$\sigma(z) = \frac{1}{1 + e^{-z}} \quad \text{where} \quad z = \beta_0 + \beta_1 x$$
+
+**Log-Odds Interpretation:**
+
+$$\log\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1 x$$
+
+The model optimizes parameters using **Maximum Likelihood Estimation (MLE)**, finding coefficients that maximize the probability of observing the training data.
+
+---
+
+### 🌳 Decision Tree — Gini Impurity
+
+Decision Trees recursively partition the feature space using the **Gini Impurity** criterion to measure node purity.
+
+**Gini Impurity Formula:**
+
+$$Gini(D) = 1 - \sum_{k=1}^{K} p_k^2$$
+
+Where $p_k$ represents the proportion of class $k$ samples in dataset $D$.
+
+**Splitting Criterion:**
+
+$$\Delta Gini = Gini(parent) - \sum_{children} \frac{n_{child}}{n_{parent}} \times Gini(child)$$
+
+| Gini Value | Interpretation |
+|------------|----------------|
+| 0.0 | Perfect purity (single class) |
+| 0.5 | Maximum impurity (binary, 50-50 split) |
+
+---
+
+## ⚙️ How Does It Work
+
+The Workbench operates on a streamlined four-stage pipeline, transforming user intentions into actionable insights:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        🔄 THE WORKBENCH PIPELINE                            │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   ┌─────────────┐      ┌─────────────┐      ┌─────────────┐      ┌────────┐│
+│   │   STAGE 1   │      │   STAGE 2   │      │   STAGE 3   │      │STAGE 4 ││
+│   │             │      │             │      │             │      │        ││
+│   │    USER     │ ───▶ │    DATA     │ ───▶ │   MODEL     │ ───▶ │ VISUAL ││
+│   │   INPUTS    │      │ GENERATION  │      │    FIT      │      │ OUTPUT ││
+│   │             │      │             │      │             │      │        ││
+│   └─────────────┘      └─────────────┘      └─────────────┘      └────────┘│
+│        🎛️                   🎲                   🧠                  📊     │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Stage 1: User Inputs 🎛️
+
+Users interact with the Streamlit sidebar to configure:
+- **Sample Size** — Number of synthetic data points (50–1000)
+- **Noise Level** — Gaussian noise standard deviation (0.0–2.0)
+- **Model Parameters** — Algorithm-specific hyperparameters
+- **Visualization Options** — Plot customizations
+
+### Stage 2: Data Generation 🎲
+
+Based on user specifications, the system generates synthetic datasets:
+```python
+# Simplified data generation logic
+X = np.random.uniform(low=0, high=10, size=(n_samples, n_features))
+y = true_function(X) + np.random.normal(0, noise_level, n_samples)
+```
+
+### Stage 3: Model Fit 🧠
+
+The selected Scikit-Learn estimator is instantiated and trained:
+```python
+model = SelectedAlgorithm(**hyperparameters)
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+```
+
+### Stage 4: Visualization 📊
+
+Plotly renders interactive visualizations:
+- Scatter plots with data points
+- Decision boundaries or regression surfaces
+- Performance metrics and residual plots
+
+---
+
+## 📦 What Are the Requirements
+
+### System Requirements
+
+| Requirement | Minimum | Recommended |
+|-------------|---------|-------------|
+| **Python** | 3.8+ | 3.10+ |
+| **RAM** | 4 GB | 8 GB |
+| **Storage** | 500 MB | 1 GB |
+| **Browser** | Modern (Chrome, Firefox, Edge) | Chrome/Chromium |
+
+### Python Dependencies
+
+```
+streamlit>=1.28.0
+scikit-learn>=1.3.0
+pandas>=2.0.0
+numpy>=1.24.0
+plotly>=5.18.0
+matplotlib>=3.7.0
+```
+
+---
+
+## 🏗️ Technical Architecture
+
+The Machine Learning Workbench employs a **monolithic Streamlit architecture** optimized for educational deployability and maintenance simplicity.
 
 ### Directory Structure
 
 ```
 ml-workbench/
 │
-├── 📄 Home.py                          # [ENTRY POINT] Central Navigation Hub & Landing Page
-├── 📄 requirements.txt                 # Dependency Manifest (pip freeze)
-├── 📄 README.md                        # Technical Documentation (You are here)
-├── 📄 .gitignore                       # Git Exclusion Rules
+├── 🏠 Home.py                    # Application entry point & landing page
 │
-└── 📁 pages/                           # [MODULES] Algorithm Implementations
-    │
-    ├── 📄 1_🏡_Linear_Regression.py    # Module A: Real Estate Estimator
-    │                                   #   └── Continuous Value Prediction
-    │
-    ├── 📄 2_🎓_Logistic_Regression.py  # Module B: Student Success Predictor
-    │                                   #   └── Binary Classification (Probability)
-    │
-    └── 📄 3_🌳_Decision_Tree.py        # Module C: Exam Classifier [NEW v3.0]
-                                        #   └── Non-Linear Classification
+├── 📁 pages/                     # Streamlit multipage directory
+│   ├── 1_📈_Linear_Regression.py
+│   ├── 2_📊_Logistic_Regression.py
+│   ├── 3_🌳_Decision_Tree.py
+│   └── 4_⚔️_Model_Showdown.py
+│
+├── 📁 utils/                     # Shared utility modules
+│   ├── data_generator.py        # Synthetic data creation
+│   ├── model_trainer.py         # Unified training interface
+│   ├── visualizer.py            # Plotly visualization factory
+│   └── metrics.py               # Performance calculations
+│
+├── 📁 assets/                    # Static resources
+│   ├── styles.css               # Custom styling
+│   └── images/                   # Documentation images
+│
+├── 📄 requirements.txt          # Dependency specification
+├── 📄 README.md                 # This documentation
+└── 📄 .streamlit/config.toml    # Streamlit configuration
 ```
 
-### Architectural Flow Diagram
+### Architecture Diagram
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                              🖥️ USER INTERFACE                              │
-│                         Streamlit Web Application                           │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐                  │
-│  │   Home.py    │    │   Sidebar    │    │   Widgets    │                  │
-│  │  Navigation  │◄──►│   Controls   │◄──►│   Sliders    │                  │
-│  └──────┬───────┘    └──────────────┘    └──────────────┘                  │
-│         │                                                                   │
-│         ▼                                                                   │
+┌────────────────────────────────────────────────────────────────────────────┐
+│                           🌐 STREAMLIT SERVER                              │
+├────────────────────────────────────────────────────────────────────────────┤
+│                                                                            │
 │  ┌──────────────────────────────────────────────────────────────────────┐  │
-│  │                        📁 PAGES/ MODULE ROUTER                       │  │
-│  ├──────────────────┬───────────────────┬───────────────────────────────┤  │
-│  │  🏡 Module A     │  🎓 Module B      │  🌳 Module C                  │  │
-│  │  Linear Reg.     │  Logistic Reg.    │  Decision Tree               │  │
-│  └────────┬─────────┴─────────┬─────────┴─────────────┬─────────────────┘  │
-│           │                   │                       │                    │
-└───────────┼───────────────────┼───────────────────────┼────────────────────┘
-            │                   │                       │
-            ▼                   ▼                       ▼
-┌───────────────────────────────────────────────────────────────────────────┐
-│                          🧠 ML ENGINE LAYER                               │
-│                      Scikit-Learn Model Training                          │
-├───────────────────────────────────────────────────────────────────────────┤
-│  LinearRegression()  │  LogisticRegression()  │  DecisionTreeClassifier() │
-│       .fit()         │        .fit()          │         .fit()            │
-│     .predict()       │    .predict_proba()    │       .predict()          │
-└───────────────────────────────────────────────────────────────────────────┘
-            │                   │                       │
-            ▼                   ▼                       ▼
-┌───────────────────────────────────────────────────────────────────────────┐
-│                        📊 VISUALIZATION LAYER                             │
-│                    Plotly Express + Matplotlib                            │
-├───────────────────────────────────────────────────────────────────────────┤
-│   Line of Best Fit   │   Sigmoid S-Curve     │   Decision Surface        │
-│   Scatter Plot       │   Probability Curve   │   Tree Structure Diagram  │
-└───────────────────────────────────────────────────────────────────────────┘
-            │                   │                       │
-            ▼                   ▼                       ▼
-┌───────────────────────────────────────────────────────────────────────────┐
-│                         📦 DATA OPERATIONS                                │
-│                        Pandas + NumPy                                     │
-├───────────────────────────────────────────────────────────────────────────┤
-│  • Synthetic Data Generation    • Vectorized Operations                  │
-│  • DataFrame Management         • Random Noise Injection                 │
-│  • Train/Test Splitting         • Feature Scaling                        │
-└───────────────────────────────────────────────────────────────────────────┘
+│  │                         Home.py (Entry Point)                        │  │
+│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐  ┌────────────────┐  │  │
+│  │  │  Session   │  │   Cache    │  │   State    │  │    Routing     │  │  │
+│  │  │ Management │  │  Manager   │  │   Store    │  │    Engine      │  │  │
+│  │  └────────────┘  └────────────┘  └────────────┘  └────────────────┘  │  │
+│  └──────────────────────────────────────────────────────────────────────┘  │
+│                                    │                                       │
+│                                    ▼                                       │
+│  ┌──────────────────────────────────────────────────────────────────────┐  │
+│  │                        pages/ Directory                              │  │
+│  │                                                                      │  │
+│  │   ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌───────────┐   │  │
+│  │   │   Linear    │  │  Logistic   │  │  Decision   │  │  Model    │   │  │
+│  │   │ Regression  │  │ Regression  │  │    Tree     │  │ Showdown  │   │  │
+│  │   └─────────────┘  └─────────────┘  └─────────────┘  └───────────┘   │  │
+│  │                                                                      │  │
+│  └──────────────────────────────────────────────────────────────────────┘  │
+│                                    │                                       │
+│                                    ▼                                       │
+│  ┌──────────────────────────────────────────────────────────────────────┐  │
+│  │                         utils/ Modules                               │  │
+│  │   ┌────────────────┐  ┌────────────────┐  ┌────────────────────────┐ │  │
+│  │   │ data_generator │  │  model_trainer │  │      visualizer        │ │  │
+│  │   └────────────────┘  └────────────────┘  └────────────────────────┘ │  │
+│  └──────────────────────────────────────────────────────────────────────┘  │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
 ```
 
+### Design Rationale
+
+| Aspect | Choice | Justification |
+|--------|--------|---------------|
+| **Architecture** | Monolithic | Simplified deployment; no microservices overhead |
+| **State Management** | `st.session_state` | Native Streamlit solution; reactive updates |
+| **Caching** | `@st.cache_data` | Prevents redundant computations; improves UX |
+| **Visualization** | Plotly | Interactive; client-side rendering; zoom/pan |
+
 ---
 
-## 📚 Module Breakdown
+## 🤖 Model Specifications
 
-This section provides an exhaustive technical deep-dive into each algorithm module, covering the mathematical foundations, business applications, implementation logic, and visual outputs.
-
----
-
-### 🏡 Module A: Real Estate Estimator (Linear Regression)
+### 📈 Linear Regression
 
 <table>
 <tr>
-<td width="30%">
+<td width="40%">
 
-**Classification Type**  
-`Supervised Learning`
+**Purpose:**
+Predicting **continuous numerical values** by fitting a linear relationship between features and target.
 
-**Problem Domain**  
-`Regression (Continuous)`
+**Use Cases:**
+- Price prediction
+- Trend forecasting
+- Quantitative estimation
 
-**Target Variable**  
-`House Price ($)`
-
-**Feature Variable**  
-`Square Footage (sq/ft)`
+**Key Parameters:**
+- `fit_intercept`: Include bias term
+- `normalize`: Feature scaling (deprecated)
 
 </td>
-<td width="70%">
+<td width="60%">
 
-#### Business Problem Statement
+```python
+from sklearn.linear_model import LinearRegression
 
-In the real estate industry, property valuation is a critical function that impacts buyers, sellers, lenders, and insurers. This module simulates a simplified housing market where the price of a property is primarily driven by its size.
+# Model instantiation
+model = LinearRegression(fit_intercept=True)
 
-**Real-World Applications:**
-- Automated property appraisal systems
-- Mortgage risk assessment
-- Real estate portfolio analytics
-- Insurance premium calculation
+# Training
+model.fit(X_train, y_train)
+
+# Prediction
+y_pred = model.predict(X_test)
+
+# Coefficients
+print(f"Slope: {model.coef_}")
+print(f"Intercept: {model.intercept_}")
+```
 
 </td>
 </tr>
 </table>
 
-#### Mathematical Foundation
-
-**Linear Regression** is a statistical method that models the relationship between a dependent variable ($y$) and one or more independent variables ($x$). The goal is to find the linear equation that best predicts the target value.
-
-**The Linear Equation:**
-
-$$\Large y = mx + b$$
-
-| Symbol | Name | Description |
-|:------:|:-----|:------------|
-| $y$ | **Dependent Variable** | The predicted house price (output) |
-| $x$ | **Independent Variable** | The square footage of the property (input) |
-| $m$ | **Slope (Coefficient)** | The rate of change; price increase per additional square foot |
-| $b$ | **Y-Intercept** | The base price when square footage equals zero |
-
-#### Optimization Strategy: Ordinary Least Squares (OLS)
-
-The algorithm finds the optimal values for $m$ and $b$ by minimizing the **Sum of Squared Residuals (SSR)**:
-
-$$\Large SSR = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
-
-Where:
-- $y_i$ = Actual observed price of house $i$
-- $\hat{y}_i$ = Predicted price of house $i$
-- $n$ = Total number of houses in the dataset
-
-The optimal slope is calculated as:
-
-$$\Large m = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^{n}(x_i - \bar{x})^2}$$
-
-And the intercept:
-
-$$\Large b = \bar{y} - m\bar{x}$$
-
-#### Performance Metrics
-
-| Metric | Formula | Interpretation |
-|:-------|:--------|:---------------|
-| **R² Score** | $R^2 = 1 - \frac{SS_{res}}{SS_{tot}}$ | Proportion of variance explained (0.0 to 1.0). Higher is better. |
-| **Mean Squared Error (MSE)** | $MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2$ | Average squared difference between predicted and actual values. Lower is better. |
-| **Root MSE (RMSE)** | $RMSE = \sqrt{MSE}$ | Same units as target variable. Easier to interpret. |
-
-#### Visual Output
-
-```
-Price ($)
-    │
-    │                                    ● Actual Data Points (Blue)
-    │                               ●  ─────── Line of Best Fit (Red)
-    │                          ●  /
-    │                     ●   /
-    │                ●      /
-    │           ●        /
-    │      ●          /
-    │ ●            /
-    │           /
-    │        /
-    │     /
-    └──────────────────────────────────► Square Footage (sq/ft)
-```
-
-#### Sidebar Controls
-
-| Control | Range | Effect |
-|:--------|:------|:-------|
-| **Number of Houses** | 50 – 500 | Dataset size; more samples = more stable model |
-| **Market Volatility (Noise)** | 0 – 100,000 | Simulates economic uncertainty; higher noise = lower R² |
+**Output Interpretation:**
+- **Coefficient (Slope)**: For each unit increase in X, Y changes by this amount
+- **Intercept**: Predicted Y when X = 0
+- **R² Score**: Proportion of variance explained (0.0 to 1.0)
 
 ---
 
-### 🎓 Module B: Student Success Predictor (Logistic Regression)
+### 📊 Logistic Regression
 
 <table>
 <tr>
-<td width="30%">
+<td width="40%">
 
-**Classification Type**  
-`Supervised Learning`
+**Purpose:**
+Predicting **binary class probabilities** using the logistic (sigmoid) function.
 
-**Problem Domain**  
-`Binary Classification`
-
-**Target Variable**  
-`Pass (1) / Fail (0)`
-
-**Feature Variable**  
-`Study Hours`
-
-</td>
-<td width="70%">
-
-#### Business Problem Statement
-
-Educational institutions and corporate training departments need to identify at-risk individuals before failure occurs. This module predicts the probability of a student passing an exam based on their study hours, enabling early intervention strategies.
-
-**Real-World Applications:**
-- Student retention systems
-- Loan default prediction
-- Medical diagnosis (disease/no disease)
-- Email spam detection
+**Use Cases:**
+- Spam detection
+- Disease diagnosis
 - Customer churn prediction
 
+**Key Parameters:**
+- `C`: Inverse regularization strength
+- `solver`: Optimization algorithm
+- `max_iter`: Convergence iterations
+
+</td>
+<td width="60%">
+
+```python
+from sklearn.linear_model import LogisticRegression
+
+# Model instantiation
+model = LogisticRegression(
+    C=1.0,
+    solver='lbfgs',
+    max_iter=100
+)
+
+# Training
+model.fit(X_train, y_train)
+
+# Probability prediction
+y_proba = model.predict_proba(X_test)[:, 1]
+
+# Class prediction (threshold = 0.5)
+y_pred = model.predict(X_test)
+```
+
 </td>
 </tr>
 </table>
 
-#### Mathematical Foundation
-
-**Logistic Regression** is a classification algorithm that predicts the probability of a binary outcome. Unlike linear regression, it outputs a value between 0 and 1, representing the likelihood of belonging to the positive class.
-
-**The Sigmoid (Logistic) Function:**
-
-$$\Large P(y=1|x) = \sigma(z) = \frac{1}{1 + e^{-z}}$$
-
-Where the linear combination $z$ is:
-
-$$\Large z = \beta_0 + \beta_1 x$$
-
-| Symbol | Name | Description |
-|:------:|:-----|:------------|
-| $P(y=1\|x)$ | **Probability** | Likelihood of passing given study hours |
-| $\sigma(z)$ | **Sigmoid Function** | Maps any real number to range (0, 1) |
-| $e$ | **Euler's Number** | Mathematical constant ≈ 2.71828 |
-| $z$ | **Log-Odds (Logit)** | Linear combination of inputs |
-| $\beta_0$ | **Intercept** | Baseline log-odds |
-| $\beta_1$ | **Coefficient** | Impact of study hours on log-odds |
-
-#### The Decision Boundary
-
-The **Decision Boundary** is the threshold where the predicted probability equals 50%. This is the "tipping point" that separates the two classes:
-
-$$\Large P(y=1|x) = 0.5 \implies z = 0 \implies x_{boundary} = -\frac{\beta_0}{\beta_1}$$
-
-**Classification Rule:**
-- If $P(y=1|x) \geq 0.5$ → Predict **PASS** ✅
-- If $P(y=1|x) < 0.5$ → Predict **FAIL** ❌
-
-#### Optimization Strategy: Maximum Likelihood Estimation (MLE)
-
-The algorithm finds optimal parameters by maximizing the **Log-Likelihood Function**:
-
-$$\Large \mathcal{L}(\beta) = \sum_{i=1}^{n} \left[ y_i \log(\hat{p}_i) + (1-y_i) \log(1-\hat{p}_i) \right]$$
-
-This is equivalent to minimizing the **Binary Cross-Entropy Loss**:
-
-$$\Large BCE = -\frac{1}{n}\sum_{i=1}^{n} \left[ y_i \log(\hat{p}_i) + (1-y_i) \log(1-\hat{p}_i) \right]$$
-
-#### Performance Metrics
-
-| Metric | Formula | Interpretation |
-|:-------|:--------|:---------------|
-| **Accuracy** | $\frac{TP + TN}{Total}$ | Overall correctness of predictions |
-| **Precision** | $\frac{TP}{TP + FP}$ | Of predicted passes, how many actually passed? |
-| **Recall** | $\frac{TP}{TP + FN}$ | Of actual passes, how many did we catch? |
-| **F1 Score** | $2 \times \frac{Precision \times Recall}{Precision + Recall}$ | Harmonic mean of precision and recall |
-
-#### Visual Output: The Sigmoid S-Curve
-
-```
-Probability
-    1.0 │                              ●●●●●●●●●●●●  PASS Zone
-        │                           ●●●
-        │                        ●●●
-        │                      ●●
-    0.5 │- - - - - - - - - - ●- - - - - - - - - - - Decision Boundary
-        │                  ●●
-        │                ●●
-        │             ●●●
-    0.0 │●●●●●●●●●●●●●                              FAIL Zone
-        └──────────────────────────────────────────► Study Hours
-                           ↑
-                    Tipping Point
-                    (50% Threshold)
-```
-
-#### Sidebar Controls
-
-| Control | Range | Effect |
-|:--------|:------|:-------|
-| **Number of Students** | 50 – 500 | Dataset size for training |
-| **Data Spread (Noise)** | 0.5 – 3.0 | Overlap between pass/fail groups; higher = harder classification |
+**Output Interpretation:**
+- **Probability Score**: Value between 0.0 and 1.0
+- **Decision Boundary**: Where P(y=1) = 0.5
+- **Log-Odds**: Linear relationship in transformed space
 
 ---
 
-### 🌳 Module C: Exam Classifier (Decision Tree)
-
-<p align="center">
-  <img src="https://img.shields.io/badge/NEW-v3.0-ff6b6b?style=for-the-badge" alt="New"/>
-</p>
+### 🌳 Decision Tree Classifier
 
 <table>
 <tr>
-<td width="30%">
+<td width="40%">
 
-**Classification Type**  
-`Supervised Learning`
+**Purpose:**
+**Non-linear classification** through recursive feature space partitioning.
 
-**Problem Domain**  
-`Non-Linear Classification`
+**Use Cases:**
+- Rule extraction
+- Non-linear patterns
+- Feature importance analysis
 
-**Target Variable**  
-`Pass (1) / Fail (0)`
-
-**Feature Variables**  
-`Study Hours`  
-`Previous Score (%)`
+**Key Parameters:**
+- `max_depth`: Tree depth limit
+- `min_samples_split`: Split threshold
+- `criterion`: Gini or Entropy
 
 </td>
-<td width="70%">
+<td width="60%">
 
-#### Business Problem Statement
+```python
+from sklearn.tree import DecisionTreeClassifier
 
-Real-world decision-making rarely follows a straight line. This module demonstrates how Decision Trees create **non-linear decision boundaries** by asking a sequence of "Yes/No" questions. The model learns complex rules that can capture interactions between multiple features.
+# Model instantiation
+model = DecisionTreeClassifier(
+    max_depth=5,
+    min_samples_split=2,
+    criterion='gini',
+    random_state=42
+)
 
-**Real-World Applications:**
-- Medical diagnosis flowcharts
-- Credit scoring systems
-- Customer segmentation
-- Fraud detection
-- Manufacturing quality control
+# Training
+model.fit(X_train, y_train)
+
+# Prediction
+y_pred = model.predict(X_test)
+
+# Feature importance
+importance = model.feature_importances_
+```
 
 </td>
 </tr>
 </table>
 
-#### Mathematical Foundation
-
-**Decision Trees** use **recursive binary partitioning** to split the feature space into homogeneous regions. At each node, the algorithm selects the feature and threshold that best separates the classes.
-
-#### Impurity Measures
-
-The algorithm evaluates splits using **impurity metrics**. A pure node contains only one class.
-
-**Gini Impurity:**
-
-$$\Large Gini(D) = 1 - \sum_{k=1}^{K} (p_k)^2$$
-
-Where:
-- $D$ = Dataset at current node
-- $K$ = Number of classes (2 for binary)
-- $p_k$ = Proportion of class $k$ in node $D$
-
-**Entropy (Information Gain):**
-
-$$\Large Entropy(D) = -\sum_{k=1}^{K} p_k \log_2(p_k)$$
-
-**Information Gain** measures the reduction in entropy after a split:
-
-$$\Large IG(D, A) = Entropy(D) - \sum_{v \in Values(A)} \frac{|D_v|}{|D|} \times Entropy(D_v)$$
-
-#### The Splitting Process
-
-```
-                        ┌─────────────────────────────┐
-                        │    🌳 ROOT NODE             │
-                        │    All 200 Students         │
-                        │    Gini = 0.50              │
-                        └─────────────┬───────────────┘
-                                      │
-                      ┌───────────────┴───────────────┐
-                      │  Is Study Hours > 5.2?       │
-                      └───────────────┬───────────────┘
-                                      │
-              ┌───────────────────────┴───────────────────────┐
-              │ YES                                     NO    │
-              ▼                                               ▼
-┌─────────────────────────────┐             ┌─────────────────────────────┐
-│    📗 LEFT CHILD            │             │    📕 RIGHT CHILD           │
-│    120 Students             │             │    80 Students              │
-│    Gini = 0.32              │             │    Gini = 0.48              │
-│    Mostly PASS              │             │    Mixed                    │
-└─────────────┬───────────────┘             └─────────────┬───────────────┘
-              │                                           │
-              ▼                                           ▼
-   ┌──────────────────────┐                  ┌──────────────────────┐
-   │ Is Prev Score > 60%? │                  │ Is Prev Score > 45%? │
-   └──────────┬───────────┘                  └──────────┬───────────┘
-              │                                         │
-      ┌───────┴───────┐                         ┌───────┴───────┐
-      ▼               ▼                         ▼               ▼
-   ┌──────┐       ┌──────┐                   ┌──────┐       ┌──────┐
-   │ PASS │       │ PASS │                   │ PASS │       │ FAIL │
-   │ ✅   │       │ ✅   │                   │ ✅   │       │ ❌   │
-   │ 95%  │       │ 78%  │                   │ 52%  │       │ 89%  │
-   └──────┘       └──────┘                   └──────┘       └──────┘
-```
-
-#### Visual Outputs
-
-**1. Decision Surface (Feature Space Visualization):**
-
-```
-Previous Score (%)
-    100 │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-        │▓▓▓▓▓▓▓▓▓▓▓▓ PASS ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-        │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-     60 │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓┬────────────────────
-        │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│░░░░░░░░░░░░░░░░░░░░
-        │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│░░░░░░ FAIL ░░░░░░░░
-     30 │─────────────────────┤░░░░░░░░░░░░░░░░░░░░
-        │░░░░░░░░░░░░░░░░░░░░░│░░░░░░░░░░░░░░░░░░░░
-      0 │░░░░░░░░░░░░░░░░░░░░░│░░░░░░░░░░░░░░░░░░░░
-        └─────────────────────┴────────────────────► Study Hours
-        0                     5                   10
-        
-        ▓▓▓ = PASS Region    ░░░ = FAIL Region
-```
-
-**2. Tree Structure Diagram:** A matplotlib-rendered flowchart showing the exact decision path.
-
-#### Sidebar Controls
-
-| Control | Range | Effect |
-|:--------|:------|:-------|
-| **Number of Students** | 100 – 500 | Dataset size |
-| **Data Noise** | 0.0 – 2.0 | Class overlap; simulates real-world messiness |
-| **Max Depth** | 1 – 10 | Tree complexity (see Hyperparameter Tuning section) |
-| **Criterion** | Gini / Entropy | Impurity measure for splitting |
+**Output Interpretation:**
+- **Decision Boundaries**: Axis-parallel rectangular regions
+- **Feature Importance**: Contribution to impurity reduction
+- **Tree Depth**: Model complexity indicator
 
 ---
 
-## 🛠️ Technical Stack
+### Model Comparison Matrix
 
-| Layer | Component | Technology | Version | Purpose |
-|:------|:----------|:-----------|:--------|:--------|
-| **Frontend** | Web Framework | Streamlit | 1.28+ | Interactive UI, state management, widget controls |
-| **Backend** | Core Language | Python | 3.8+ | Application logic and control flow |
-| **ML Engine** | Model Training | Scikit-Learn | 1.3+ | `fit()`, `predict()`, `predict_proba()`, metrics |
-| **Data Ops** | DataFrames | Pandas | 2.0+ | Tabular data management and manipulation |
-| **Data Ops** | Numerical | NumPy | 1.24+ | Vectorized operations, random generation |
-| **Visualization** | Interactive Charts | Plotly Express | 5.17+ | Zoomable, hoverable decision boundaries |
-| **Visualization** | Static Diagrams | Matplotlib | 3.7+ | Decision tree structure rendering |
+| Aspect | Linear Regression | Logistic Regression | Decision Tree |
+|--------|-------------------|---------------------|---------------|
+| **Task** | Regression | Classification | Classification |
+| **Output** | Continuous | Probability [0,1] | Class Label |
+| **Boundary** | Linear | Linear (in logit space) | Non-linear |
+| **Interpretability** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **Handles Non-linearity** | ❌ | ❌ | ✅ |
+| **Prone to Overfitting** | Low | Low | High |
 
-### Dependency Manifest (`requirements.txt`)
+---
 
-```text
-streamlit>=1.28.0
-scikit-learn>=1.3.0
-pandas>=2.0.0
-numpy>=1.24.0
-plotly>=5.17.0
-matplotlib>=3.7.0
+## 🛠️ Tech Stack
+
+<div align="center">
+
+| Layer | Technology | Version | Purpose |
+|:-----:|:----------:|:-------:|:--------|
+| **🖥️ Frontend** | Streamlit | 1.28+ | Interactive web interface and component rendering |
+| **🐍 Runtime** | Python | 3.10+ | Core programming language and execution environment |
+| **📊 Data** | Pandas | 2.0+ | Data manipulation, transformation, and tabular operations |
+| **🔢 Numerical** | NumPy | 1.24+ | High-performance numerical computations and array operations |
+| **🤖 ML Engine** | Scikit-Learn | 1.3+ | Model training, evaluation, and preprocessing pipelines |
+| **📈 Visualization** | Plotly | 5.18+ | Interactive, publication-quality charts and plots |
+| **📉 Static Plots** | Matplotlib | 3.7+ | Supplementary static visualizations and exports |
+
+</div>
+
+### Technology Justification
+
+```
+┌──────────────────────────────────────────────────────────────────────────┐
+│                         WHY THESE TECHNOLOGIES?                          │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  STREAMLIT         → Zero frontend code; Python-native; rapid iteration │
+│  SCIKIT-LEARN      → Industry standard; consistent API; extensive docs  │
+│  PLOTLY            → Client-side interactivity; zoom/pan; responsive    │
+│  PANDAS + NUMPY    → Data science lingua franca; vectorized operations  │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 💻 System Requirements
+## 📥 Install Dependencies
 
-### Minimum Requirements
+Once inside your project directory with an activated virtual environment, install all required packages:
 
-| Component | Specification |
-|:----------|:--------------|
-| **Operating System** | Windows 10, macOS 10.15+, Ubuntu 20.04+ |
-| **Python Version** | 3.8 or higher |
-| **RAM** | 4 GB |
-| **Storage** | 500 MB free space |
-| **Browser** | Chrome 90+, Firefox 88+, Edge 90+, Safari 14+ |
+```bash
+pip install -r requirements.txt
+```
 
-### Recommended Specifications
+### Manual Installation (Alternative)
 
-| Component | Specification |
-|:----------|:--------------|
-| **Python Version** | 3.10 or 3.11 (best compatibility) |
-| **RAM** | 8 GB+ |
-| **Display** | 1920×1080 or higher (for optimal chart viewing) |
+If you prefer explicit control or encounter issues:
+
+```bash
+# Core framework
+pip install streamlit>=1.28.0
+
+# Machine learning
+pip install scikit-learn>=1.3.0
+
+# Data handling
+pip install pandas>=2.0.0 numpy>=1.24.0
+
+# Visualization
+pip install plotly>=5.18.0 matplotlib>=3.7.0
+```
+
+### Verify Installation
+
+```bash
+python -c "import streamlit; import sklearn; import plotly; print('✅ All dependencies installed successfully!')"
+```
 
 ---
 
-## 📦 Installation & Setup
+## 🔧 Installation and Setup
 
-### Prerequisites Checklist
+Follow these steps to get the Machine Learning Workbench running on your local machine.
 
-Before installation, ensure you have:
+### Prerequisites
 
-- [ ] Python 3.8+ installed (`python --version`)
-- [ ] pip package manager (`pip --version`)
-- [ ] Git version control (`git --version`)
-- [ ] Terminal/Command Prompt access
+Ensure you have the following installed:
+- **Git** — Version control ([Download](https://git-scm.com/downloads))
+- **Python 3.8+** — Runtime environment ([Download](https://python.org/downloads))
+- **pip** — Package manager (included with Python)
 
 ### Step-by-Step Installation
 
 #### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/WSalim2024/ml-workbench.git
-```
+# Clone via HTTPS
+git clone https://github.com/yourusername/ml-workbench.git
 
-#### Step 2: Navigate to Project Directory
-
-```bash
+# Navigate to project directory
 cd ml-workbench
 ```
 
-#### Step 3: Create Virtual Environment (Recommended)
+#### Step 2: Create Virtual Environment
 
-Creating an isolated environment prevents dependency conflicts with other Python projects.
+<table>
+<tr>
+<th>🐧 Linux / macOS</th>
+<th>🪟 Windows</th>
+</tr>
+<tr>
+<td>
 
-**Windows (Command Prompt):**
 ```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-**Windows (PowerShell):**
-```bash
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-```
-
-**macOS / Linux:**
-```bash
+# Create virtual environment
 python3 -m venv venv
+
+# Activate environment
 source venv/bin/activate
 ```
 
-> 💡 **Tip:** You'll know the virtual environment is active when you see `(venv)` prefix in your terminal prompt.
+</td>
+<td>
 
-#### Step 4: Upgrade pip (Optional but Recommended)
+```powershell
+# Create virtual environment
+python -m venv venv
 
-```bash
-pip install --upgrade pip
+# Activate environment
+.\venv\Scripts\activate
 ```
 
-#### Step 5: Install Dependencies
+</td>
+</tr>
+</table>
+
+#### Step 3: Install Dependencies
 
 ```bash
+# Upgrade pip (recommended)
+pip install --upgrade pip
+
+# Install project dependencies
 pip install -r requirements.txt
 ```
 
-**Expected Output:**
-```
-Successfully installed streamlit-1.28.0 scikit-learn-1.3.0 pandas-2.0.0 ...
-```
-
-#### Step 6: Verify Installation
+#### Step 4: Verify Setup
 
 ```bash
-python -c "import streamlit; import sklearn; print('✅ All dependencies installed successfully!')"
+# Check Streamlit installation
+streamlit --version
+
+# Expected output: Streamlit, version 1.28.x
 ```
+
+### Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| `ModuleNotFoundError` | Ensure virtual environment is activated |
+| `pip` command not found | Use `pip3` instead or check PATH |
+| Permission denied | Use `pip install --user` flag |
+| Conflicting versions | Create fresh virtual environment |
 
 ---
 
-## 🚀 Launching the Application
+## ▶️ Launching the Cockpit
 
-### Start the Workbench
-
-Execute the entry point via the Streamlit CLI:
+With dependencies installed and your virtual environment activated, launch the application:
 
 ```bash
 streamlit run Home.py
 ```
 
-### Expected Console Output
+### Expected Output
 
 ```
   You can now view your Streamlit app in your browser.
 
   Local URL: http://localhost:8501
-  Network URL: http://192.168.1.xxx:8501
+  Network URL: http://192.168.x.x:8501
 
   For better performance, install the Watchdog module:
-  $ pip install watchdog
+
+    $ xcode-select --install
+    $ pip install watchdog
 ```
 
-The application will **automatically launch** in your default web browser at:
+### Launch Options
 
-```
-http://localhost:8501
-```
-
-### Alternative Launch Options
-
-**Specify Custom Port:**
 ```bash
+# Custom port
 streamlit run Home.py --server.port 8080
-```
 
-**Disable Auto-Browser Launch:**
-```bash
+# Disable auto-open browser
 streamlit run Home.py --server.headless true
+
+# Enable wide layout mode
+streamlit run Home.py --theme.base dark
 ```
 
-**Enable Wide Mode by Default:**
-```bash
-streamlit run Home.py --theme.base light
-```
+### Quick Access
+
+Once launched, navigate to:
+
+| Environment | URL |
+|-------------|-----|
+| **Local Development** | `http://localhost:8501` |
+| **Network Access** | `http://<your-ip>:8501` |
 
 ---
 
-## 📖 User Guide & Interpretation
+## 📖 User Guide
 
-Understanding **model quality** is critical for extracting actionable insights. Use this comprehensive guide to analyze the "Simulation Lab" results across all three modules.
+### Interface Overview
 
-### Quick Reference: Good vs. Bad Models
+```
+┌────────────────────────────────────────────────────────────────────────────┐
+│                           🧠 ML WORKBENCH                                  │
+├────────────────┬───────────────────────────────────────────────────────────┤
+│                │                                                           │
+│   📁 SIDEBAR   │                    📊 MAIN CANVAS                         │
+│                │                                                           │
+│  ┌──────────┐  │   ┌─────────────────────────────────────────────────┐    │
+│  │ Page     │  │   │                                                 │    │
+│  │ Selector │  │   │              VISUALIZATION AREA                 │    │
+│  └──────────┘  │   │                                                 │    │
+│                │   │     • Interactive Plots                         │    │
+│  ┌──────────┐  │   │     • Decision Boundaries                       │    │
+│  │ Sample   │  │   │     • Regression Lines                          │    │
+│  │ Size     │  │   │                                                 │    │
+│  │ [====]   │  │   └─────────────────────────────────────────────────┘    │
+│  └──────────┘  │                                                           │
+│                │   ┌─────────────────────────────────────────────────┐    │
+│  ┌──────────┐  │   │                                                 │    │
+│  │ Noise    │  │   │              METRICS PANEL                      │    │
+│  │ Level    │  │   │                                                 │    │
+│  │ [====]   │  │   │     • R² Score / Accuracy                       │    │
+│  └──────────┘  │   │     • MSE / Log Loss                            │    │
+│                │   │     • Confusion Matrix                          │    │
+│  ┌──────────┐  │   │                                                 │    │
+│  │ Model    │  │   └─────────────────────────────────────────────────┘    │
+│  │ Params   │  │                                                           │
+│  └──────────┘  │                                                           │
+│                │                                                           │
+└────────────────┴───────────────────────────────────────────────────────────┘
+```
 
-<table>
-<thead>
-<tr>
-<th width="15%">Module</th>
-<th width="42%">✅ Good Result (Strong Model)</th>
-<th width="43%">❌ Bad Result (Weak/Overfit Model)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+### Sidebar Controls
 
-**🏡 Linear Regression**
+#### 🎚️ Sample Size Slider
 
-</td>
-<td>
+| Setting | Effect |
+|---------|--------|
+| **Low (50–100)** | Quick iterations; may underfit |
+| **Medium (200–500)** | Balanced training; recommended |
+| **High (500–1000)** | Stable estimates; slower updates |
 
-**High R² Score (0.80+)**
+```
+Recommended: Start at 200, increase for smoother decision boundaries
+```
 
-The red regression line cuts cleanly through the center of the blue data points. Residuals (vertical distances from points to line) are small and randomly distributed.
+#### 🔊 Noise Level Slider
 
-**Indicators:**
-- R² > 0.80
-- MSE is low relative to price scale
-- Line captures the trend direction
+| Setting | Effect |
+|---------|--------|
+| **0.0–0.3** | Clean data; easy separation |
+| **0.3–0.7** | Realistic noise; moderate challenge |
+| **0.7–1.5** | High noise; tests model robustness |
+| **1.5–2.0** | Extreme noise; near-random patterns |
 
-</td>
-<td>
+```
+Experiment: Watch how decision boundaries change with increasing noise
+```
 
-**Low R² Score (<0.50)**
+### Interpreting the Visualizations
 
-The regression line appears arbitrary—data points are scattered everywhere with no clear pattern. This occurs when "Market Volatility" is set too high.
+#### Linear Regression Charts
 
-**Indicators:**
-- R² < 0.50
-- MSE is very large
-- Line seems disconnected from data
+- **Blue Dots**: Training data points
+- **Red Line**: Fitted regression line
+- **Shaded Region**: Confidence interval (if enabled)
+- **Residual Lines**: Vertical distances from points to line
 
-</td>
-</tr>
-<tr>
-<td>
+#### Logistic Regression Charts
 
-**🎓 Logistic Regression**
+- **Two-Color Scatter**: Class 0 (blue) vs Class 1 (red)
+- **S-Curve Overlay**: Sigmoid probability function
+- **Decision Threshold**: Horizontal line at P = 0.5
+- **Gradient Background**: Probability heat map
 
-</td>
-<td>
+#### Decision Tree Charts
 
-**Steep S-Curve**
-
-A sharp vertical transition separates the FAIL zone (red, left) from the PASS zone (green, right). The sigmoid has a clear "cliff" at the decision boundary.
-
-**Indicators:**
-- Accuracy > 85%
-- Clear separation of classes
-- Narrow transition zone
-
-</td>
-<td>
-
-**Flat Horizontal Line**
-
-The sigmoid curve is nearly horizontal, indicating the model cannot distinguish between classes. It's essentially "guessing" with ~50% probability everywhere.
-
-**Indicators:**
-- Accuracy ≈ 50%
-- No clear decision boundary
-- High class overlap
-
-</td>
-</tr>
-<tr>
-<td>
-
-**🌳 Decision Tree**
-
-</td>
-<td>
-
-**Clean Rectangular Regions**
-
-The decision surface shows logical, interpretable rectangular boundaries. Regions are appropriately sized and the tree depth is moderate (3-5).
-
-**Indicators:**
-- Accuracy: 85-95%
-- Smooth rectangular regions
-- Tree depth: 3-5 levels
-- Generalizes well to test data
-
-</td>
-<td>
-
-**"Spiderweb" or "Static" Pattern**
-
-The decision boundary looks like pixelated noise with tiny, chaotic regions. This is **overfitting**—the model memorizes training data including noise.
-
-**Indicators:**
-- Training accuracy: 100%
-- Test accuracy: much lower
-- Tree depth: 8-10+ levels
-- Jagged, complex boundaries
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### Detailed Interpretation Guide
-
-#### Linear Regression: Reading the Scatter Plot
-
-| Visual Element | What to Look For |
-|:---------------|:-----------------|
-| **Data Points (Blue)** | Should show a general upward trend from left to right |
-| **Regression Line (Red)** | Should pass through the "center of mass" of the points |
-| **Spread Around Line** | Tighter spread = higher R²; wider spread = lower R² |
-| **Outliers** | Points far from the line disproportionately affect the model |
-
-#### Logistic Regression: Reading the S-Curve
-
-| Curve Characteristic | Interpretation |
-|:---------------------|:---------------|
-| **Steep Curve** | Model is confident; clear distinction between classes |
-| **Gradual Curve** | Model is uncertain; features have weak predictive power |
-| **Curve Position** | Leftward shift = easier to pass; Rightward = harder to pass |
-| **Asymptotes** | Should approach 0 and 1 at extremes |
-
-#### Decision Tree: Reading the Surface
-
-| Surface Pattern | Interpretation |
-|:----------------|:---------------|
-| **Large Rectangles** | Simple rules; may underfit |
-| **Medium Rectangles** | Balanced complexity; ideal |
-| **Tiny Rectangles** | Complex rules; likely overfitting |
-| **Diagonal Patterns** | Impossible—trees only make axis-parallel splits |
+- **Colored Regions**: Class predictions per area
+- **Boundary Lines**: Split decisions (axis-parallel)
+- **Data Overlay**: Actual points with true labels
+- **Misclassified Highlights**: Points in wrong regions
 
 ---
 
-## ⚙️ Hyperparameter Tuning Deep Dive
+### ⚔️ Model Showdown Module
 
-### What is a Hyperparameter?
+<div align="center">
 
-**Hyperparameters** are configuration settings that control the learning process itself—they are set *before* training begins, unlike model parameters (weights) which are learned *during* training.
+**The Arena Where Algorithms Compete**
 
-### The Critical Hyperparameter: Max Depth
+</div>
 
-In Decision Trees, **Max Depth** controls how many levels of questions the tree can ask. This is the primary lever for managing the **Bias-Variance Tradeoff**.
+The **Model Showdown** is a dedicated comparison environment that places two algorithms side-by-side under identical conditions.
 
-```
-Max Depth = 1                    Max Depth = 3                    Max Depth = 10
-(Decision Stump)                 (Balanced)                       (Deep Tree)
+#### Accessing the Showdown
 
-     [Root]                          [Root]                           [Root]
-    /      \                        /      \                         /      \
-[Leaf]  [Leaf]                 [Node]    [Node]                  [Node]   [Node]
-                               /    \    /    \                  /    \   /    \
-                            [L]  [L] [L]  [L]                 [...] [...] [...] [...]
-                                                               (Many more levels...)
+1. Navigate to **📄 Pages** → **⚔️ Model Showdown**
+2. Select algorithms for **Left Panel** and **Right Panel**
+3. Configure shared data parameters
+4. Click **"Generate & Train"**
 
-UNDERFITTING                   OPTIMAL                          OVERFITTING
-High Bias                      Balanced                         High Variance
-Low Variance                   Good Generalization              Memorizes Noise
-```
-
-### The Bias-Variance Tradeoff Visualized
+#### Showdown Layout
 
 ```
-Error
-  │
-  │ \                                              ╱
-  │  \    Total Error                            ╱
-  │   \         ___________________________    ╱
-  │    \      ╱                            \  ╱
-  │     \   ╱                               ╲╱
-  │      ╲╱
-  │     ╱  ╲
-  │   ╱     ╲___________
-  │ ╱                    ╲_____ Variance (Overfitting)
-  │╱
-  │ ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  Bias (Underfitting)
-  └──────────────────────────────────────────────► Model Complexity
-       Low                                   High
-       (Max Depth = 1)                       (Max Depth = 10)
-                           ↑
-                     Sweet Spot
-                   (Max Depth ≈ 3-5)
+┌────────────────────────────────────────────────────────────────────────────┐
+│                         ⚔️ MODEL SHOWDOWN                                  │
+├────────────────────────────────┬───────────────────────────────────────────┤
+│                                │                                           │
+│     📈 LINEAR REGRESSION       │     🌳 DECISION TREE                      │
+│                                │                                           │
+│  ┌─────────────────────────┐   │   ┌─────────────────────────┐             │
+│  │                         │   │   │                         │             │
+│  │    [Visualization]      │   │   │    [Visualization]      │             │
+│  │                         │   │   │                         │             │
+│  └─────────────────────────┘   │   └─────────────────────────┘             │
+│                                │                                           │
+│  Metrics:                      │   Metrics:                                │
+│  • R² Score: 0.847             │   • Accuracy: 0.923                       │
+│  • MSE: 0.156                  │   • F1 Score: 0.918                       │
+│  • Training Time: 12ms         │   • Training Time: 8ms                    │
+│                                │                                           │
+├────────────────────────────────┴───────────────────────────────────────────┤
+│                          📊 COMPARISON SUMMARY                             │
+│  ┌──────────────────────────────────────────────────────────────────────┐  │
+│  │  Winner: Decision Tree (Higher accuracy on non-linear pattern)      │  │
+│  └──────────────────────────────────────────────────────────────────────┘  │
+└────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Tuning Recommendations for This Dataset
+#### Comparison Scenarios to Try
 
-| Max Depth | Behavior | Training Accuracy | Test Accuracy | Recommendation |
-|:---------:|:---------|:-----------------:|:-------------:|:---------------|
-| **1-2** | Underfitting | 60-70% | 60-70% | ❌ Too simple; missing patterns |
-| **3-5** | Optimal | 85-95% | 82-92% | ✅ **Recommended range** |
-| **6-7** | Borderline | 95-98% | 78-85% | ⚠️ Monitor for overfitting |
-| **8-10** | Overfitting | 99-100% | 65-75% | ❌ Memorizing noise |
+| Scenario | Left Model | Right Model | Expected Winner |
+|----------|------------|-------------|-----------------|
+| Linear Data | Linear Reg | Decision Tree | Linear Reg (simpler) |
+| Non-linear Data | Linear Reg | Decision Tree | Decision Tree |
+| Noisy Binary | Logistic Reg | Decision Tree | Depends on depth |
+| Clean Binary | Logistic Reg | Decision Tree | Similar performance |
 
-### How to Diagnose Overfitting
+#### Learning Objectives
 
-1. **Compare Training vs. Test Accuracy**
-   - Gap > 10% suggests overfitting
-   - Equal values suggest good generalization
+Through the Showdown, users will understand:
 
-2. **Inspect the Decision Surface**
-   - "Spiderweb" patterns = overfitting
-   - Clean rectangles = good fit
-
-3. **Examine the Tree Diagram**
-   - Deep, narrow trees = overfitting
-   - Balanced, interpretable trees = good fit
+1. **No Free Lunch Theorem**: No algorithm dominates all scenarios
+2. **Bias-Variance Tradeoff**: Simple vs. complex model behavior
+3. **Overfitting Detection**: Watch trees memorize noise
+4. **Appropriate Model Selection**: Match algorithm to data pattern
 
 ---
 
-## ⚡ Performance Optimization
+## ⚠️ Restrictions and Limitations
 
-### Tips for Smooth Operation
+<div align="center">
 
-| Scenario | Solution |
-|:---------|:---------|
-| **Slow Chart Rendering** | Reduce sample size to 200-300 |
-| **Memory Issues** | Close other browser tabs; restart Streamlit |
-| **Port Already in Use** | Run on alternate port: `--server.port 8502` |
-| **Watchdog Warning** | Install watchdog: `pip install watchdog` |
+### Important Boundaries of This Application
 
-### Browser Recommendations
+</div>
 
-For optimal interactive chart performance:
+| Category | Limitation | Rationale |
+|----------|------------|-----------|
+| **Data Source** | Synthetic data only | Educational focus; controlled experiments |
+| **Production Use** | Not intended for real decisions | No data validation; simplified models |
+| **Scale** | Limited to ~1000 samples | Browser performance; educational scope |
+| **Algorithms** | Three foundational models | Pedagogical progression; scope management |
+| **Features** | Maximum 2D visualization | Human visual comprehension limits |
 
-1. **Chrome** — Best Plotly compatibility
-2. **Firefox** — Good alternative
-3. **Edge** — Chromium-based; works well
-4. **Safari** — May have minor rendering differences
+### What This Application Is NOT
 
----
-
-## 🔧 Troubleshooting
-
-### Common Issues & Solutions
-
-<details>
-<summary><strong>❌ "ModuleNotFoundError: No module named 'streamlit'"</strong></summary>
-
-**Cause:** Dependencies not installed or virtual environment not activated.
-
-**Solution:**
-```bash
-# Activate virtual environment first
-source venv/bin/activate  # macOS/Linux
-venv\Scripts\activate     # Windows
-
-# Then install dependencies
-pip install -r requirements.txt
 ```
-</details>
-
-<details>
-<summary><strong>❌ "Address already in use" error</strong></summary>
-
-**Cause:** Another process is using port 8501.
-
-**Solution:**
-```bash
-# Option 1: Use a different port
-streamlit run Home.py --server.port 8502
-
-# Option 2: Kill the existing process (macOS/Linux)
-lsof -ti:8501 | xargs kill -9
+❌ NOT a production ML pipeline
+❌ NOT a replacement for professional tools (MLflow, Kubeflow)
+❌ NOT suitable for real-world decision making
+❌ NOT designed for large-scale datasets
+❌ NOT a comprehensive ML curriculum
 ```
-</details>
 
-<details>
-<summary><strong>❌ Charts not rendering / blank plots</strong></summary>
+### What This Application IS
 
-**Cause:** Browser compatibility or JavaScript issues.
-
-**Solution:**
-1. Clear browser cache
-2. Try a different browser (Chrome recommended)
-3. Disable browser extensions temporarily
-</details>
-
-<details>
-<summary><strong>❌ "PermissionError" when creating virtual environment</strong></summary>
-
-**Cause:** Insufficient permissions in the directory.
-
-**Solution:**
-```bash
-# Run with elevated permissions or choose a different directory
-cd ~
-mkdir projects && cd projects
-git clone https://github.com/WSalim2024/ml-workbench.git
 ```
-</details>
+✅ An educational sandbox for algorithm intuition
+✅ A visualization tool for understanding model behavior
+✅ A portfolio demonstration of ML + web development skills
+✅ A teaching aid for introductory ML courses
+✅ A rapid experimentation environment
+```
 
 ---
 
 ## 📜 Disclaimer
 
-<table>
-<tr>
-<td>
-
-### ⚠️ Important Notice
-
-This project utilizes **Synthetic Data Generation** for educational demonstration purposes.
-
-**What This Means:**
-
-- The datasets (House Prices, Exam Scores) are **randomly generated at runtime**
-- They do **not** reflect real-world economic or academic statistics
-- The mathematical engines (OLS, Sigmoid, Gini) are industry-standard implementations
-
-**Appropriate Use:**
-
-✅ Learning machine learning concepts  
-✅ Portfolio demonstration  
-✅ Academic presentations  
-✅ Technical interviews  
-
-**Inappropriate Use:**
-
-❌ Real financial planning or investment decisions  
-❌ Actual student grade prediction  
-❌ Production deployment without real data  
-
-</td>
-</tr>
-</table>
+<div align="center">
 
 ---
 
-## 🗺️ Roadmap
+**⚠️ EDUCATIONAL USE ONLY ⚠️**
 
-### Future Development Plans
+---
 
-| Version | Feature | Status |
-|:--------|:--------|:-------|
-| **v3.1** | Random Forest Ensemble Module | 🔜 Planned |
-| **v3.2** | K-Means Clustering Visualization | 🔜 Planned |
-| **v3.3** | Neural Network Playground | 📋 Backlog |
-| **v4.0** | Real Dataset Integration (Kaggle API) | 📋 Backlog |
-| **v4.1** | Model Export (Pickle/ONNX) | 📋 Backlog |
+</div>
+
+This application, **The Machine Learning Workbench v3.1**, is developed and distributed **exclusively for educational and demonstration purposes**.
+
+### Terms of Use
+
+1. **No Warranty**: This software is provided "as is" without warranty of any kind, express or implied.
+
+2. **Not for Production**: The models, predictions, and outputs generated by this application should **never** be used for real-world decision making, including but not limited to:
+   - Financial decisions
+   - Medical diagnoses
+   - Legal determinations
+   - Safety-critical applications
+
+3. **Data Privacy**: All data used within this application is synthetically generated. Users should **not** input real personal, sensitive, or proprietary data.
+
+4. **Educational Context**: This tool is designed to build intuition and understanding of machine learning concepts. It simplifies many aspects of real-world ML pipelines for pedagogical clarity.
+
+5. **Liability**: The author(s) assume no liability for any misuse, misinterpretation, or damages arising from the use of this application.
+
+### Recommended Use Cases
+
+| ✅ Appropriate | ❌ Inappropriate |
+|----------------|------------------|
+| Classroom demonstrations | Production deployments |
+| Self-study and exploration | Real data analysis |
+| Portfolio projects | Business decisions |
+| Algorithm intuition building | Medical/legal/financial advice |
+| Teaching ML fundamentals | Safety-critical systems |
 
 ---
 
 ## 👨‍💻 Author
 
-<p align="center">
-  <strong>Developed as a Portfolio Project</strong><br>
-  <em>Master's Student in Engineering Systems | Senior IT Professional</em>
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://github.com/WSalim2024">
-    <img src="https://img.shields.io/badge/GitHub-WSalim2024-181717?style=for-the-badge&logo=github" alt="GitHub"/>
-  </a>
-  <a href="https://linkedin.com">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
-  </a>
-</p>
+### **Waqar Salim**
+
+*Master's Student & IT Professional*
 
 ---
 
-## 🙏 Acknowledgments
-
-- **Scikit-Learn Team** — For the robust ML implementations
-- **Streamlit Team** — For the intuitive web framework
-- **Plotly Team** — For beautiful interactive visualizations
-- **Open Source Community** — For continuous inspiration
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/yourusername)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF5722?style=for-the-badge&logo=google-chrome)](https://yourportfolio.com)
 
 ---
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Made_with-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Made with Python"/>
-  <img src="https://img.shields.io/badge/Powered_by-Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Powered by Scikit-Learn"/>
-  <img src="https://img.shields.io/badge/Built_with-❤️-red?style=flat-square" alt="Built with Love"/>
-</p>
+</div>
 
-<p align="center">
-  <em>⭐ If this project helped you understand Machine Learning better, please consider giving it a star!</em>
-</p>
+### Project Motivation
 
+> *"The best way to learn is to teach. The best way to teach is to show. The best way to show is to let others explore."*
 
+This workbench was born from countless hours of struggling with abstract ML concepts and the realization that **interactive visualization** is the key to unlocking true understanding.
+
+### Acknowledgments
+
+- **Scikit-Learn Team**: For the gold standard in ML APIs
+- **Streamlit Community**: For democratizing ML deployment
+- **Open Source Contributors**: For the ecosystem that makes this possible
+
+---
+
+<div align="center">
+
+---
+
+**Built with ❤️ and ☕ by a lifelong learner**
+
+*The Machine Learning Workbench v3.1 — Turning Black Boxes into Glass Boxes*
+
+---
+
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer)
+
+</div>

@@ -7,36 +7,28 @@ st.set_page_config(
 )
 
 st.title("🧠 The Machine Learning Workbench")
-st.markdown("### v3.0 - Enterprise Edition")
+st.markdown("### v3.1 - Comparison Update")
+st.markdown("""
+> **System Status:** Online 🟢
 
-st.markdown(
-    """
-    > **System Status:** Online 🟢
+Welcome to the centralized portfolio for Machine Learning algorithms.
 
-    Welcome to the centralized portfolio for Machine Learning algorithms. 
-    This platform demonstrates the mathematical foundations of AI, built from scratch.
+---
 
-    ---
+### 📂 Learning Modules
 
-    ### 📂 Available Modules
+#### 1. [Linear Regression](/Linear_Regression) (Real Estate)
+* Prediction of continuous values ($y=mx+b$).
 
-    #### 1. [Linear Regression (Real Estate)](/Linear_Regression)
-    * **Type:** Regression (Continuous)
-    * **Use Case:** Predicting house prices.
-    * **Core Math:** $y = mx + b$
+#### 2. [Logistic Regression](/Logistic_Regression) (Probability)
+* Binary classification using probabilities (S-Curve).
 
-    #### 2. [Logistic Regression (Student Success)](/Logistic_Regression)
-    * **Type:** Classification (Binary)
-    * **Use Case:** Pass/Fail Probability.
-    * **Core Math:** Sigmoid Function (S-Curve).
+#### 3. [Decision Tree](/Decision_Tree) (Rules)
+* Non-linear classification using decision rules.
 
-    #### 3. [Decision Tree (Exam Classifier)](/Decision_Tree)
-    * **Type:** Non-Linear Classification
-    * **Use Case:** Complex decision rules.
-    * **Core Math:** Gini Impurity & Entropy (Tree Splitting).
+### ⚔️ Analysis Modules
 
-    ---
-
-    *Architecture: Streamlit Multipage App | Stack: Python, Scikit-Learn, Plotly*
-    """
-)
+#### 4. [Model Showdown](/Model_Comparison) (New!)
+* **The Arena:** Compare Logistic Regression vs. Decision Trees side-by-side.
+* **The Goal:** Visualize how different algorithms "see" the same data differently.
+""")
