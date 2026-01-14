@@ -375,7 +375,7 @@ The author assumes no liability for misuse or misinterpretation of results.
 
 <div align="center">
 
-### Waqar Salim**
+### Waqar Salim
 
 ---
 
