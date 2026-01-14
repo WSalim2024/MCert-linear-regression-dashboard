@@ -5,7 +5,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.model_selection import train_test_split, cross_val_score, cross_validate, KFold
 from sklearn.linear_model import LogisticRegression, LinearRegression
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, r2_score, mean_squared_error
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, r2_score, mean_squared_error, \
+    mean_absolute_error
 
 # --- UI Configuration ---
 st.set_page_config(page_title="Cross-Validation Lab", layout="wide")
@@ -54,7 +55,7 @@ else:
     X = df[['SqFt']]  # 2D array
     y = df['Price']
     model = LinearRegression()
-    # Note: Scikit-Learn uses negative MSE for optimization, so we flip it back later
+    # Note: Scikit-Learn uses negative MSE/MAE for optimization
     scoring_metrics = ['r2', 'neg_mean_squared_error', 'neg_mean_absolute_error']
     main_metric_name = "R² Score"
 
@@ -74,7 +75,6 @@ with col1:
         single_score = accuracy_score(y_test, y_pred)
         st.metric(label="Single Test Accuracy", value=f"{single_score:.1%}")
 
-        # Missing Requirement: Display F1 Score
         st.dataframe({
             "Metric": ["Accuracy", "Precision", "Recall", "F1-Score"],
             "Score": [
@@ -87,7 +87,9 @@ with col1:
     else:
         single_score = r2_score(y_test, y_pred)
         st.metric(label="Single R² Score", value=f"{single_score:.3f}")
+        # Added MAE display here for single split
         st.write(f"MSE: {mean_squared_error(y_test, y_pred):,.0f}")
+        st.write(f"MAE: {mean_absolute_error(y_test, y_pred):,.0f}")
 
 # --- 2. The Cross-Validation Approach (The "Pro Way") ---
 with col2:
@@ -104,7 +106,6 @@ with col2:
 
         st.metric(label=f"Average {main_metric_name}", value=f"{mean_score:.1%}", delta=f"±{std_dev:.1%}")
 
-        # Comparative Table
         cv_df = pd.DataFrame({
             "Fold #": range(1, cv_folds + 1),
             "Accuracy": cv_results['test_accuracy'],
@@ -120,19 +121,25 @@ with col2:
 
         st.metric(label=f"Average {main_metric_name}", value=f"{mean_score:.3f}", delta=f"±{std_dev:.3f}")
 
+        # ADDED: MAE Column to this table
         cv_df = pd.DataFrame({
             "Fold #": range(1, cv_folds + 1),
             "R² Score": cv_results['test_r2'],
-            "MSE (Negative)": cv_results['test_neg_mean_squared_error']
+            "MSE (Negative)": cv_results['test_neg_mean_squared_error'],
+            "MAE (Negative)": cv_results['test_neg_mean_absolute_error']
         })
-        st.dataframe(cv_df.style.format({"R² Score": "{:.3f}", "MSE (Negative)": "{:,.0f}"}))
+        # Formatting to show comma-separated numbers for large values
+        st.dataframe(cv_df.style.format({
+            "R² Score": "{:.3f}",
+            "MSE (Negative)": "{:,.0f}",
+            "MAE (Negative)": "{:,.0f}"
+        }))
 
 # --- 3. Visualization ---
 st.divider()
 st.subheader("📊 Visualizing the Variability")
 st.write("Does the model performance jump around? If bars are uneven, your model is unstable.")
 
-# Bar Chart of scores per fold
 fold_indices = list(range(1, cv_folds + 1))
 if "Classification" in task_type:
     scores = cv_results['test_accuracy']
@@ -142,7 +149,6 @@ else:
     title_text = "R² Score per Fold"
 
 fig = px.bar(x=fold_indices, y=scores, labels={'x': 'Fold Number', 'y': 'Score'}, title=title_text)
-# Add a line for the Single Split result to compare
 fig.add_hline(y=single_score, line_dash="dot", annotation_text="Single Split Score", annotation_position="top right",
               line_color="red")
 fig.add_hline(y=mean_score, line_dash="dash", annotation_text="CV Average Score", annotation_position="bottom right",
