@@ -2,9 +2,9 @@
 
 # 🧠 The Machine Learning Workbench
 
-### **Version 3.4 — The Feature Engineering Update**
+### **Version 3.5 — The Selection Suite Update**
 
-*A Comprehensive ML Educational Suite: From Basic Regression to Automated Feature Selection*
+*A Comprehensive ML Educational Suite: Two Philosophies of Feature Selection*
 
 ---
 
@@ -12,7 +12,8 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3+-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Statsmodels](https://img.shields.io/badge/Statsmodels-0.14+-4051B5?style=for-the-badge&logo=python&logoColor=white)
-![Version](https://img.shields.io/badge/Version-3.4-blueviolet?style=for-the-badge)
+![Plotly](https://img.shields.io/badge/Plotly-5.18+-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Version](https://img.shields.io/badge/Version-3.5-blueviolet?style=for-the-badge)
 ![Modules](https://img.shields.io/badge/Modules-7-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
@@ -25,8 +26,7 @@
 ```
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
-║    "Not all features are created equal — let statistics prove which ones     ║
-║     matter and which ones are just noise."                                    ║
+║    "Two paths to the same truth: Remove the noise, or recruit the signal."   ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -38,11 +38,10 @@
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [What's New in v3.4](#-whats-new-in-v34)
+- [What's New in v3.5](#-whats-new-in-v35)
 - [Key Features](#-key-features)
 - [Module Overview](#-module-overview)
-- [Module G: Feature Selection Lab](#-module-g-feature-selection-lab-new)
-- [How It Works: Backward Elimination](#-how-it-works-backward-elimination)
+- [Module G: Feature Selection Suite](#-module-g-feature-selection-suite)
 - [Tech Stack](#-tech-stack)
 - [Installation](#-installation)
 - [User Guide](#-user-guide)
@@ -53,30 +52,38 @@
 
 ## 🚀 Overview
 
-**The Machine Learning Workbench v3.4** has evolved into a **comprehensive ML educational suite** — a complete learning platform that takes users from fundamental concepts to advanced feature engineering techniques.
+**The Machine Learning Workbench v3.5** delivers a **comprehensive ML educational suite** — a complete learning platform spanning from fundamental algorithms to advanced feature engineering techniques.
 
-This release introduces **statistical feature selection**, answering one of the most critical questions in machine learning: *"Which features actually matter?"*
+This release upgrades the Feature Selection Lab into a full **Feature Selection Suite**, offering two complementary approaches to identifying the features that truly matter.
 
 <div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                         THE COMPLETE LEARNING JOURNEY                           │
+│                      TWO PHILOSOPHIES OF FEATURE SELECTION                      │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   FUNDAMENTALS          VALIDATION           AUTOMATION         ENGINEERING    │
-│       │                     │                    │                   │         │
-│       ▼                     ▼                    ▼                   ▼         │
-│   ┌───────┐            ┌───────┐            ┌───────┐           ┌───────┐      │
-│   │ Learn │     →      │ Trust │     →      │ Tune  │     →     │ Clean │      │
-│   │Models │            │Models │            │Models │           │  Data │      │
-│   └───────┘            └───────┘            └───────┘           └───────┘      │
 │                                                                                 │
-│   Modules              Module E              Module F            Module G       │
-│    A-D                 Cross-Val             Grid Search         Feature        │
-│                                                                  Selection      │
+│        🔙 BACKWARD ELIMINATION              🔜 FORWARD SELECTION                │
+│        ─────────────────────────            ────────────────────────            │
 │                                                                                 │
-│                    ◄─────────── v3.4 COMPLETE SUITE ───────────►               │
+│        "The Garbage Collector"              "The Talent Scout"                  │
+│                                                                                 │
+│        Start: ALL features                  Start: ZERO features                │
+│        Action: REMOVE the worst             Action: ADD the best                │
+│        Metric: P-Values                     Metric: R-Squared                   │
+│        Tool: Statsmodels                    Tool: Scikit-Learn                  │
+│                                                                                 │
+│             ┌─────────────┐                      ┌─────────────┐                │
+│             │ ██ ██ ██ ██ │                      │             │                │
+│             │ ██ ██ ██    │ ───►                 │          ██ │ ───►           │
+│             │ ██ ██       │                      │       ██ ██ │                │
+│             │ ██          │                      │    ██ ██ ██ │                │
+│             └─────────────┘                      └─────────────┘                │
+│              Subtractive                          Additive                      │
+│                                                                                 │
+│                                                                                 │
+│        SAME DESTINATION: The optimal feature set                                │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -91,44 +98,48 @@ This release introduces **statistical feature selection**, answering one of the 
 | ⚔️ **Comparison** | Pit algorithms against each other | D |
 | 🔬 **Validation** | Test reliability with K-Fold CV | E |
 | 🔍 **Optimization** | Auto-tune hyperparameters | F |
-| 🗑️ **Feature Selection** | Eliminate useless variables | G |
+| 🎯 **Feature Selection** | Two methods: Backward & Forward | G |
 
 ---
 
-## ✨ What's New in v3.4
+## ✨ What's New in v3.5
 
-### 🗑️ Feature Selection Lab — "The Garbage Collector"
+### 🎯 Feature Selection Suite — Complete Upgrade
 
-The flagship addition that uses **statistical hypothesis testing** to mathematically prove which features contribute to predictions and which ones are just noise.
+The Feature Selection Lab has evolved into a comprehensive **Feature Selection Suite** with two distinct methodologies accessible via tabs:
 
-| Feature | Description |
-|---------|-------------|
-| 📊 **Backward Elimination** | Iteratively removes statistically insignificant features |
-| 📉 **P-Value Analysis** | Uses statsmodels OLS for significance testing |
-| 🎭 **Noise Injection** | Mixes real predictors with garbage features |
-| 📋 **Elimination Log** | Watch features get dropped round-by-round |
-| ✅ **Final Significance Check** | Verify surviving features are truly significant |
+<div align="center">
 
-### 🆕 New Dependency: Statsmodels
+| Tab | Method | Metaphor | Metric | Library |
+|:---:|:-------|:---------|:-------|:--------|
+| 🔙 **Tab 1** | Backward Elimination | The Garbage Collector | P-Values | Statsmodels |
+| 🔜 **Tab 2** | Forward Selection | The Talent Scout | R-Squared ($R^2$) | Scikit-Learn |
 
-```diff
-+ statsmodels>=0.14.0    # NEW: OLS regression with P-Value calculation
+</div>
+
+### Why Two Methods?
+
 ```
-
-**Why Statsmodels?**
-
-Scikit-Learn is optimized for prediction, not inference. For statistical significance testing (P-Values, confidence intervals), we need `statsmodels`:
-
-```python
-# Scikit-Learn: Prediction-focused
-from sklearn.linear_model import LinearRegression
-model.fit(X, y)
-predictions = model.predict(X_new)  # ✅ Great for this
-
-# Statsmodels: Inference-focused
-import statsmodels.api as sm
-model = sm.OLS(y, X).fit()
-p_values = model.pvalues  # ✅ Great for this
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                         WHEN TO USE EACH METHOD                                 │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│  🔙 BACKWARD ELIMINATION                    🔜 FORWARD SELECTION                │
+│  ─────────────────────────                  ────────────────────────            │
+│                                                                                 │
+│  ✅ When you suspect most features          ✅ When you suspect most features   │
+│     are useful (few garbage)                   are garbage (few useful)         │
+│                                                                                 │
+│  ✅ When you need statistical               ✅ When you want interpretable      │
+│     significance (P-Values)                    performance gains (R²)           │
+│                                                                                 │
+│  ✅ When inference matters                  ✅ When prediction matters          │
+│     (understanding relationships)              (maximizing accuracy)            │
+│                                                                                 │
+│  ✅ Small to medium feature sets            ✅ Large feature sets               │
+│     (computationally intensive)                (faster convergence)             │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -140,7 +151,7 @@ p_values = model.pvalues  # ✅ Great for this
 <td width="50%">
 
 ### 📈 Core Algorithms
-- **Linear Regression** — Continuous value prediction
+- **Linear Regression** — Continuous prediction
 - **Logistic Regression** — Binary classification
 - **Decision Trees** — Non-linear boundaries
 - **Real-time Training** — Instant visual feedback
@@ -149,9 +160,9 @@ p_values = model.pvalues  # ✅ Great for this
 <td width="50%">
 
 ### 🔬 Validation & Reliability
-- **K-Fold Cross-Validation** — Test across multiple splits
-- **Variance Analysis** — Measure model stability
-- **Per-Fold Breakdown** — Granular performance view
+- **K-Fold Cross-Validation** — Multi-split testing
+- **Variance Analysis** — Stability metrics
+- **Per-Fold Breakdown** — Granular insights
 
 </td>
 </tr>
@@ -159,18 +170,18 @@ p_values = model.pvalues  # ✅ Great for this
 <td width="50%">
 
 ### 🔍 Automation & Tuning
-- **Grid Search** — Exhaustive parameter optimization
-- **Heatmap Visualization** — Parameter landscape mapping
-- **Best Config Discovery** — Automatic optimal settings
+- **Grid Search** — Exhaustive parameter sweep
+- **Heatmap Visualization** — Parameter landscapes
+- **Best Config Discovery** — Automatic optimization
 
 </td>
 <td width="50%">
 
-### 🗑️ Feature Engineering (NEW)
-- **Backward Elimination** — Statistical feature pruning
-- **P-Value Calculation** — Significance testing
-- **Noise Detection** — Identify garbage features
-- **Elimination Logging** — Step-by-step removal tracking
+### 🎯 Feature Selection Suite (UPGRADED)
+- 🔙 **Backward Elimination** — P-Value pruning
+- 🔜 **Forward Selection** — R² recruitment
+- **Dual Library Support** — Statsmodels + Sklearn
+- **Comparative Visualization** — Side-by-side results
 
 </td>
 </tr>
@@ -180,7 +191,7 @@ p_values = model.pvalues  # ✅ Great for this
 
 ## 📦 Module Overview
 
-The Workbench now contains **7 distinct learning modules**, each building on the previous:
+The Workbench contains **7 distinct learning modules**, now with an upgraded Feature Selection Suite:
 
 <div align="center">
 
@@ -192,374 +203,297 @@ The Workbench now contains **7 distinct learning modules**, each building on the
 | **D** | Model Showdown | ⚔️ | Algorithm Comparison | Linear vs Non-linear |
 | **E** | Cross-Validation Lab | 🔬 | Reliability Testing | K-Fold, Variance |
 | **F** | Grid Search Lab | 🔍 | Hyperparameter Tuning | Exhaustive Search |
-| **G** | Feature Selection Lab | 🗑️ | **Feature Engineering** | **Backward Elimination** |
+| **G** | **Feature Selection Suite** | 🎯 | **Feature Engineering** | **Backward + Forward** |
 
 </div>
 
-### Module Progression Path
+### Module Progression
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                           LEARNING PROGRESSION                                  │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   BEGINNER                 INTERMEDIATE                 ADVANCED                │
+│   FUNDAMENTALS          VALIDATION           AUTOMATION         ENGINEERING    │
 │                                                                                 │
-│   ┌─────┐ ┌─────┐ ┌─────┐     ┌─────┐ ┌─────┐          ┌─────┐ ┌─────┐         │
-│   │  A  │→│  B  │→│  C  │ ──► │  D  │→│  E  │ ──────►  │  F  │→│  G  │         │
-│   └─────┘ └─────┘ └─────┘     └─────┘ └─────┘          └─────┘ └─────┘         │
-│                                                                                 │
-│   "How do        "Which       "Is my         "What's the   "Which features     │
-│    models         model is     model          best           actually           │
-│    work?"         better?"     reliable?"     config?"       matter?"           │
+│   ┌───┐ ┌───┐ ┌───┐     ┌───┐ ┌───┐          ┌───┐             ┌───────────┐   │
+│   │ A │→│ B │→│ C │ ──► │ D │→│ E │ ──────►  │ F │ ─────────►  │     G     │   │
+│   └───┘ └───┘ └───┘     └───┘ └───┘          └───┘             │ ┌───┬───┐ │   │
+│                                                                │ │🔙 │🔜 │ │   │
+│   "How do     "Which    "Is it      "Best       "Which         │ └───┴───┘ │   │
+│    models      is        reliable?"  settings?"  features       └───────────┘   │
+│    work?"      better?"                          matter?"                       │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🗑️ Module G: Feature Selection Lab (NEW!)
+## 🎯 Module G: Feature Selection Suite
 
 <div align="center">
 
-### **"The Garbage Collector"**
+### **Two Tabs. Two Philosophies. One Goal.**
 
-*Mathematically proving which features matter and which are just noise*
+*Finding the features that truly drive predictions*
 
 </div>
 
-### The Problem: Feature Pollution
-
-In real-world datasets, not all columns contribute to predictions. Some features are:
+### Suite Interface
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                        FEATURE POLLUTION PROBLEM                                │
+│                       🎯 FEATURE SELECTION SUITE                                │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   PREDICTING: Student Exam Scores                                               │
+│   ┌─────────────────────────────┬─────────────────────────────┐                 │
+│   │  🔙 Backward Elimination    │  🔜 Forward Selection       │                 │
+│   │     (Active Tab)            │                             │                 │
+│   └─────────────────────────────┴─────────────────────────────┘                 │
 │                                                                                 │
-│   USEFUL FEATURES:                    GARBAGE FEATURES:                         │
-│   ─────────────────                   ─────────────────                         │
-│   ✅ Study Hours (correlation!)       ❌ Shoe Size (random noise)               │
-│   ✅ Attendance Rate (predictive!)    ❌ Jersey Number (meaningless)            │
-│   ✅ Previous GPA (strong signal!)    ❌ Favorite Color Code (irrelevant)       │
-│                                       ❌ Birth Month (no relationship)          │
-│                                                                                 │
-│   THE QUESTION: How do we PROVE which features are garbage?                     │
-│   THE ANSWER: Statistical significance testing (P-Values)                       │
-│                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
-
-### The Solution: Backward Elimination
-
-The Feature Selection Lab uses **Backward Elimination** — a systematic process that:
-
-1. Starts with ALL features (useful + garbage)
-2. Fits an OLS regression model
-3. Calculates P-Values for each feature
-4. Removes the feature with the **highest P-Value** (if P > 0.05)
-5. Repeats until all remaining features are statistically significant
-
-### P-Value Interpretation
-
-| P-Value | Meaning | Action |
-|---------|---------|--------|
-| **P < 0.01** | Highly significant | ✅ Definitely keep |
-| **P < 0.05** | Statistically significant | ✅ Keep |
-| **P ≥ 0.05** | Not significant | ❌ **ELIMINATE** |
-| **P > 0.50** | Likely random noise | ❌ Garbage feature |
-
-### The Lab Interface
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                       🗑️ FEATURE SELECTION LAB                                  │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                 │
-│  📊 DATASET CONFIGURATION                                                       │
-│  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │  Real Feature: Study_Hours (TRUE predictor of exam scores)               │  │
-│  │                                                                           │  │
-│  │  Noise Features Injected:                                                 │  │
-│  │    • Shoe_Size (random integers 6-12)                                     │  │
-│  │    • Jersey_Number (random integers 1-99)                                 │  │
-│  │    • Favorite_Color_Code (random integers 1-10)                           │  │
-│  │    • Birth_Month (random integers 1-12)                                   │  │
-│  │                                                                           │  │
-│  │  Target: Exam_Score = f(Study_Hours) + ε                                  │  │
-│  └───────────────────────────────────────────────────────────────────────────┘  │
-│                                                                                 │
-│  🔄 BACKWARD ELIMINATION IN PROGRESS...                                         │
+│   ┌─────────────────────────────────────────────────────────────────────────┐   │
+│   │                                                                         │   │
+│   │                         [TAB CONTENT AREA]                              │   │
+│   │                                                                         │   │
+│   └─────────────────────────────────────────────────────────────────────────┘   │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-### 📋 The Elimination Log
+### 🔙 Tab 1: Backward Elimination — "The Garbage Collector"
 
-Watch the algorithm systematically identify and remove garbage features round-by-round:
+**Philosophy:** Start with everything, remove the worthless.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                          📋 ELIMINATION LOG                                     │
+│                    🔙 BACKWARD ELIMINATION                                      │
+│                    "The Garbage Collector"                                      │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│  ╔═══════════════════════════════════════════════════════════════════════════╗  │
-│  ║ ROUND 1                                                                   ║  │
-│  ╠═══════════════════════════════════════════════════════════════════════════╣  │
-│  ║ Feature             │ Coefficient │ P-Value  │ Status                     ║  │
-│  ╠═════════════════════╪═════════════╪══════════╪════════════════════════════╣  │
-│  ║ const               │   12.453    │  0.0001  │ ✅ Significant             ║  │
-│  ║ Study_Hours         │    8.721    │  0.0000  │ ✅ Significant             ║  │
-│  ║ Shoe_Size           │    0.234    │  0.7823  │ ⚠️  Candidate              ║  │
-│  ║ Jersey_Number       │   -0.012    │  0.9156  │ 🗑️  WORST (removing...)   ║  │
-│  ║ Favorite_Color_Code │    0.156    │  0.6234  │ ⚠️  Candidate              ║  │
-│  ║ Birth_Month         │   -0.089    │  0.8901  │ ⚠️  Candidate              ║  │
-│  ╚═══════════════════════════════════════════════════════════════════════════╝  │
+│  CONCEPT: Like cleaning a cluttered room — throw out what doesn't belong.      │
 │                                                                                 │
-│  🗑️ DROPPED: Jersey_Number (P-Value: 0.9156 > 0.05)                             │
+│  ┌─────────────────────────────────────────────────────────────────────────┐    │
+│  │  STARTING POINT              PROCESS                 END RESULT        │    │
+│  │                                                                        │    │
+│  │  ┌─────────────────┐        ┌─────────────┐        ┌─────────────┐     │    │
+│  │  │ ALL FEATURES    │        │   REMOVE    │        │   CLEAN     │     │    │
+│  │  │                 │        │   GARBAGE   │        │   SET       │     │    │
+│  │  │ ✅ Study_Hours  │        │             │        │             │     │    │
+│  │  │ ❌ Shoe_Size    │  ───►  │  P > 0.05?  │  ───►  │ ✅ Study    │     │    │
+│  │  │ ❌ Jersey_Num   │        │  🗑️ DROP!   │        │    _Hours   │     │    │
+│  │  │ ❌ Fav_Color    │        │             │        │             │     │    │
+│  │  └─────────────────┘        └─────────────┘        └─────────────┘     │    │
+│  │                                                                        │    │
+│  └─────────────────────────────────────────────────────────────────────────┘    │
 │                                                                                 │
-│  ══════════════════════════════════════════════════════════════════════════════ │
+│  METRIC: P-Value (Statistical Significance)                                     │
+│  LIBRARY: Statsmodels (OLS with inference)                                      │
+│  THRESHOLD: P > 0.05 = Not significant = REMOVE                                 │
 │                                                                                 │
-│  ╔═══════════════════════════════════════════════════════════════════════════╗  │
-│  ║ ROUND 2                                                                   ║  │
-│  ╠═══════════════════════════════════════════════════════════════════════════╣  │
-│  ║ Feature             │ Coefficient │ P-Value  │ Status                     ║  │
-│  ╠═════════════════════╪═════════════╪══════════╪════════════════════════════╣  │
-│  ║ const               │   12.501    │  0.0001  │ ✅ Significant             ║  │
-│  ║ Study_Hours         │    8.698    │  0.0000  │ ✅ Significant             ║  │
-│  ║ Shoe_Size           │    0.198    │  0.8012  │ ⚠️  Candidate              ║  │
-│  ║ Favorite_Color_Code │    0.167    │  0.5987  │ ⚠️  Candidate              ║  │
-│  ║ Birth_Month         │   -0.102    │  0.8734  │ 🗑️  WORST (removing...)   ║  │
-│  ╚═══════════════════════════════════════════════════════════════════════════╝  │
-│                                                                                 │
-│  🗑️ DROPPED: Birth_Month (P-Value: 0.8734 > 0.05)                               │
-│                                                                                 │
-│  ══════════════════════════════════════════════════════════════════════════════ │
-│                                                                                 │
-│  ╔═══════════════════════════════════════════════════════════════════════════╗  │
-│  ║ ROUND 3                                                                   ║  │
-│  ╠═══════════════════════════════════════════════════════════════════════════╣  │
-│  ║ Feature             │ Coefficient │ P-Value  │ Status                     ║  │
-│  ╠═════════════════════╪═════════════╪══════════╪════════════════════════════╣  │
-│  ║ const               │   12.534    │  0.0000  │ ✅ Significant             ║  │
-│  ║ Study_Hours         │    8.712    │  0.0000  │ ✅ Significant             ║  │
-│  ║ Shoe_Size           │    0.187    │  0.8123  │ 🗑️  WORST (removing...)   ║  │
-│  ║ Favorite_Color_Code │    0.145    │  0.6456  │ ⚠️  Candidate              ║  │
-│  ╚═══════════════════════════════════════════════════════════════════════════╝  │
-│                                                                                 │
-│  🗑️ DROPPED: Shoe_Size (P-Value: 0.8123 > 0.05)                                 │
-│                                                                                 │
-│  ══════════════════════════════════════════════════════════════════════════════ │
-│                                                                                 │
-│  ╔═══════════════════════════════════════════════════════════════════════════╗  │
-│  ║ ROUND 4                                                                   ║  │
-│  ╠═══════════════════════════════════════════════════════════════════════════╣  │
-│  ║ Feature             │ Coefficient │ P-Value  │ Status                     ║  │
-│  ╠═════════════════════╪═════════════╪══════════╪════════════════════════════╣  │
-│  ║ const               │   12.567    │  0.0000  │ ✅ Significant             ║  │
-│  ║ Study_Hours         │    8.723    │  0.0000  │ ✅ Significant             ║  │
-│  ║ Favorite_Color_Code │    0.134    │  0.6789  │ 🗑️  WORST (removing...)   ║  │
-│  ╚═══════════════════════════════════════════════════════════════════════════╝  │
-│                                                                                 │
-│  🗑️ DROPPED: Favorite_Color_Code (P-Value: 0.6789 > 0.05)                       │
+│  WORKFLOW:                                                                      │
+│  ┌────────────────────────────────────────────────────────────────────────┐     │
+│  │  1. Fit model with ALL features                                       │     │
+│  │  2. Calculate P-Values for each feature                               │     │
+│  │  3. Find feature with HIGHEST P-Value                                 │     │
+│  │  4. If P > 0.05 → DROP IT                                             │     │
+│  │  5. Repeat until all remaining features have P < 0.05                 │     │
+│  └────────────────────────────────────────────────────────────────────────┘     │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
----
-
-### ✅ Final Significance Check
-
-After elimination completes, a bar chart displays the P-Values of surviving features:
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                      ✅ FINAL SIGNIFICANCE CHECK                                │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                 │
-│  P-Value (log scale)                                                            │
-│    │                                                                            │
-│    │                                                                            │
-│ .05├ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ SIGNIFICANCE THRESHOLD ─ ─ ─ ─ ─ ─ ─ ─ ─     │
-│    │                                                                            │
-│    │                                                                            │
-│    │                                                                            │
-│    │                                                                            │
-│.001│                                                                            │
-│    │                                                                            │
-│    │                                                                            │
-│    │  ▓▓                                                                        │
-│    │  ▓▓                                                                        │
-│.000│  ▓▓  ← P-Value so small it's barely visible!                               │
-│    │  ▓▓                                                                        │
-│    └──┬────────────────────────────────────────────────────────────────────     │
-│       │                                                                         │
-│    Study_Hours                                                                  │
-│                                                                                 │
-│  ═══════════════════════════════════════════════════════════════════════════    │
-│                                                                                 │
-│  📊 FINAL MODEL SUMMARY                                                         │
-│  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │                                                                           │  │
-│  │  Surviving Features: 1 (Study_Hours)                                      │  │
-│  │  Eliminated Features: 4 (Shoe_Size, Jersey_Number, Favorite_Color_Code,   │  │
-│  │                          Birth_Month)                                     │  │
-│  │                                                                           │  │
-│  │  Study_Hours:                                                             │  │
-│  │    • Coefficient: 8.723                                                   │  │
-│  │    • P-Value: 0.0000000012 (highly significant!)                          │  │
-│  │    • Interpretation: Each additional study hour increases                 │  │
-│  │                      exam score by ~8.7 points                            │  │
-│  │                                                                           │  │
-│  │  R-Squared: 0.847 (84.7% of variance explained by Study_Hours alone)      │  │
-│  │                                                                           │  │
-│  └───────────────────────────────────────────────────────────────────────────┘  │
-│                                                                                 │
-│  🎯 CONCLUSION: The algorithm correctly identified Study_Hours as the ONLY     │
-│     statistically significant predictor, eliminating all 4 noise features.     │
-│                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
-
-**Why is the bar barely visible?**
-
-When a feature is truly predictive, its P-Value is astronomically small (e.g., 0.0000000012). On a chart where the threshold is 0.05, such tiny values appear as almost invisible bars — which is exactly what we want to see!
-
----
-
-## ⚙️ How It Works: Backward Elimination
-
-The Feature Selection Lab implements a systematic **Backward Elimination** workflow:
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                     🔄 BACKWARD ELIMINATION WORKFLOW                            │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                 │
-│                              ┌─────────────┐                                    │
-│                              │   START     │                                    │
-│                              │ All Features│                                    │
-│                              └──────┬──────┘                                    │
-│                                     │                                           │
-│                                     ▼                                           │
-│                         ┌───────────────────────┐                               │
-│                         │   FIT OLS MODEL       │                               │
-│                         │   (statsmodels.OLS)   │                               │
-│                         └───────────┬───────────┘                               │
-│                                     │                                           │
-│                                     ▼                                           │
-│                         ┌───────────────────────┐                               │
-│                         │   GET P-VALUES        │                               │
-│                         │   for all features    │                               │
-│                         └───────────┬───────────┘                               │
-│                                     │                                           │
-│                                     ▼                                           │
-│                         ┌───────────────────────┐                               │
-│                         │   MAX P-VALUE > 0.05? │                               │
-│                         └───────────┬───────────┘                               │
-│                                     │                                           │
-│                        ┌────────────┴────────────┐                              │
-│                        │                         │                              │
-│                       YES                        NO                             │
-│                        │                         │                              │
-│                        ▼                         ▼                              │
-│              ┌─────────────────┐       ┌─────────────────┐                      │
-│              │  DROP FEATURE   │       │      DONE       │                      │
-│              │  with highest   │       │                 │                      │
-│              │    P-Value      │       │  All remaining  │                      │
-│              └────────┬────────┘       │  features are   │                      │
-│                       │                │   significant   │                      │
-│                       │                └─────────────────┘                      │
-│                       │                                                         │
-│                       └──────────────────┐                                      │
-│                                          │                                      │
-│                                          ▼                                      │
-│                              (Return to FIT step)                               │
-│                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
-
-### Implementation Code
+**Implementation:**
 
 ```python
 import statsmodels.api as sm
-import numpy as np
 
-def backward_elimination(X, y, significance_level=0.05):
-    """
-    Perform backward elimination for feature selection.
-    
-    Parameters:
-    -----------
-    X : DataFrame
-        Feature matrix with column names
-    y : Series
-        Target variable
-    significance_level : float
-        P-value threshold (default: 0.05)
-    
-    Returns:
-    --------
-    list : Names of selected features
-    """
+def backward_elimination(X, y, threshold=0.05):
     features = list(X.columns)
-    elimination_log = []
     
-    while len(features) > 0:
-        # Step 1: Fit OLS model with current features
+    while True:
         X_with_const = sm.add_constant(X[features])
         model = sm.OLS(y, X_with_const).fit()
+        p_values = model.pvalues[1:]  # Exclude constant
         
-        # Step 2: Get P-Values (exclude constant)
-        p_values = model.pvalues[1:]  # Skip 'const'
-        
-        # Step 3: Find maximum P-Value
-        max_p_value = p_values.max()
-        
-        # Step 4: Check if worst feature exceeds threshold
-        if max_p_value > significance_level:
-            # Identify and drop the worst feature
-            worst_feature = p_values.idxmax()
-            features.remove(worst_feature)
-            
-            # Log the elimination
-            elimination_log.append({
-                'round': len(elimination_log) + 1,
-                'dropped': worst_feature,
-                'p_value': max_p_value
-            })
+        max_p = p_values.max()
+        if max_p > threshold:
+            worst = p_values.idxmax()
+            features.remove(worst)
+            print(f"🗑️ Dropped: {worst} (P={max_p:.4f})")
         else:
-            # All remaining features are significant
             break
     
-    return features, elimination_log
+    return features
 ```
 
-### Why Statsmodels for P-Values?
+---
+
+### 🔜 Tab 2: Forward Selection — "The Talent Scout"
+
+**Philosophy:** Start with nothing, recruit only the best.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                    SCIKIT-LEARN vs STATSMODELS                                  │
+│                    🔜 FORWARD SELECTION                                         │
+│                    "The Talent Scout"                                           │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│  SCIKIT-LEARN (Prediction-Focused)        STATSMODELS (Inference-Focused)       │
-│  ──────────────────────────────────        ─────────────────────────────────    │
+│  CONCEPT: Like building a dream team — only hire players who improve the team. │
 │                                                                                 │
-│  ✅ Fast model training                   ✅ P-Values for each coefficient      │
-│  ✅ Easy prediction pipeline              ✅ Confidence intervals                │
-│  ✅ Cross-validation built-in             ✅ Hypothesis testing                  │
-│  ❌ No native P-Value calculation         ✅ R-squared, Adj R-squared            │
-│  ❌ No significance testing               ✅ F-statistic                         │
+│  ┌─────────────────────────────────────────────────────────────────────────┐    │
+│  │  STARTING POINT              PROCESS                 END RESULT        │    │
+│  │                                                                        │    │
+│  │  ┌─────────────────┐        ┌─────────────┐        ┌─────────────┐     │    │
+│  │  │ ZERO FEATURES   │        │   RECRUIT   │        │   DREAM     │     │    │
+│  │  │                 │        │   TALENT    │        │   TEAM      │     │    │
+│  │  │                 │        │             │        │             │     │    │
+│  │  │   [Empty]       │  ───►  │  Best ΔR²?  │  ───►  │ ✅ Study    │     │    │
+│  │  │                 │        │  ⭐ ADD!    │        │    _Hours   │     │    │
+│  │  │                 │        │             │        │             │     │    │
+│  │  └─────────────────┘        └─────────────┘        └─────────────┘     │    │
+│  │                                                                        │    │
+│  └─────────────────────────────────────────────────────────────────────────┘    │
 │                                                                                 │
-│  USE CASE: Production ML                  USE CASE: Statistical Analysis        │
+│  METRIC: R-Squared (Variance Explained)                                         │
+│  LIBRARY: Scikit-Learn (LinearRegression)                                       │
+│  CRITERION: Add feature that maximizes R² improvement                           │
 │                                                                                 │
-│  THE WORKBENCH USES BOTH:                                                       │
-│  • Scikit-Learn for Grid Search, CV, Tree models                                │
-│  • Statsmodels for Feature Selection (P-Value calculation)                      │
+│  WORKFLOW:                                                                      │
+│  ┌────────────────────────────────────────────────────────────────────────┐     │
+│  │  1. Start with ZERO features (empty model)                            │     │
+│  │  2. Try adding each remaining feature one at a time                   │     │
+│  │  3. Calculate R² for each candidate model                             │     │
+│  │  4. ADD the feature that gives the BIGGEST R² boost                   │     │
+│  │  5. Repeat until no feature improves R² significantly                 │     │
+│  └────────────────────────────────────────────────────────────────────────┘     │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Implementation:**
+
+```python
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
+
+def forward_selection(X, y, threshold=0.01):
+    remaining = set(X.columns)
+    selected = []
+    current_r2 = 0.0
+    
+    while remaining:
+        best_gain = 0
+        best_feature = None
+        
+        for feature in remaining:
+            candidate = selected + [feature]
+            model = LinearRegression().fit(X[candidate], y)
+            r2 = r2_score(y, model.predict(X[candidate]))
+            gain = r2 - current_r2
+            
+            if gain > best_gain:
+                best_gain = gain
+                best_feature = feature
+        
+        if best_gain > threshold:
+            selected.append(best_feature)
+            remaining.remove(best_feature)
+            current_r2 += best_gain
+            print(f"⭐ Added: {best_feature} (R²={current_r2:.4f}, +{best_gain:.4f})")
+        else:
+            break
+    
+    return selected
+```
+
+---
+
+### 📈 The R-Squared Growth Chart
+
+The Forward Selection tab features a powerful visualization: **The R-Squared Growth Chart**.
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                      📈 R-SQUARED GROWTH CHART                                  │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│  R²                                                                             │
+│  Score                                                                          │
+│    │                                                                            │
+│ 1.0┤                                                        ┌─────────────────  │
+│    │                                                        │                   │
+│    │                                                        │ ← Plateau         │
+│ 0.8┤                                        ●───────────────┘   (No more gains) │
+│    │                                        │                                   │
+│    │                                        │ ← Noise added                     │
+│ 0.6┤                        ●───────────────┘   (Flat line = no improvement)    │
+│    │                        │                                                   │
+│    │                        │                                                   │
+│ 0.4┤        ●───────────────┘ ← Noise added                                     │
+│    │        │                   (Flat line = no improvement)                    │
+│    │        │                                                                   │
+│ 0.2┤        │                                                                   │
+│    │   ┌────┘ ← REAL SIGNAL ADDED                                               │
+│    │   │      (Big jump! Study_Hours explains variance)                         │
+│ 0.0┼───●─────┴──────────┴──────────┴──────────┴──────────┴──────────────────    │
+│    │   │      │          │          │          │                                │
+│       Start  +Study    +Shoe      +Jersey    +Fav                               │
+│      (Empty)  Hours     Size       Number     Color                             │
+│                                                                                 │
+│  ═══════════════════════════════════════════════════════════════════════════    │
+│                                                                                 │
+│  📊 INTERPRETATION KEY:                                                         │
+│  ┌───────────────────────────────────────────────────────────────────────────┐  │
+│  │                                                                           │  │
+│  │   📈 STEEP JUMP      = Real signal! Feature explains significant variance │  │
+│  │   ── FLAT LINE       = Noise! Feature adds nothing meaningful             │  │
+│  │   📉 SLIGHT DECLINE  = Overfitting! Feature hurts generalization          │  │
+│  │                                                                           │  │
+│  └───────────────────────────────────────────────────────────────────────────┘  │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Reading the Growth Chart
+
+| Pattern | Visual | Meaning | Action |
+|---------|--------|---------|--------|
+| **Steep Jump** | 📈 Sharp upward spike | Feature explains real variance | ✅ Include in model |
+| **Flat Line** | ── Horizontal plateau | Feature is noise | ❌ Exclude from model |
+| **Slight Decline** | 📉 Small dip | Feature causes overfitting | ❌ Exclude from model |
+| **Diminishing Returns** | 📈→── Curve flattening | Approaching optimal set | ⚠️ Evaluate trade-off |
+
+### Side-by-Side Comparison
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                    BACKWARD vs FORWARD: HEAD-TO-HEAD                            │
+├───────────────────────────────────┬─────────────────────────────────────────────┤
+│                                   │                                             │
+│  🔙 BACKWARD ELIMINATION          │  🔜 FORWARD SELECTION                       │
+│                                   │                                             │
+│  Starting Point: ALL features     │  Starting Point: ZERO features              │
+│  Direction: Subtractive (remove)  │  Direction: Additive (add)                  │
+│  Metric: P-Value                  │  Metric: R-Squared                          │
+│  Question: "Is this garbage?"     │  Question: "Does this help?"                │
+│  Library: Statsmodels             │  Library: Scikit-Learn                      │
+│                                   │                                             │
+│  Best When:                       │  Best When:                                 │
+│  • Need statistical inference     │  • Need prediction performance              │
+│  • Most features likely useful    │  • Most features likely useless             │
+│  • Small feature sets             │  • Large feature sets                       │
+│                                   │                                             │
+│  Output:                          │  Output:                                    │
+│  • Elimination Log                │  • R² Growth Chart                          │
+│  • P-Value Rankings               │  • Feature Contribution Scores              │
+│  • Final Significance Check       │  • Cumulative Performance Plot              │
+│                                   │                                             │
+├───────────────────────────────────┴─────────────────────────────────────────────┤
+│                                                                                 │
+│  🎯 RESULT: Both methods typically converge on the SAME optimal feature set    │
+│             (though they may differ in edge cases)                              │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -576,43 +510,49 @@ def backward_elimination(X, y, significance_level=0.05):
 | **🐍 Runtime** | Python | 3.10+ | Core programming language |
 | **📊 Data** | Pandas | 2.0+ | DataFrames & manipulation |
 | **🔢 Numerical** | NumPy | 1.24+ | Array operations |
-| **🤖 ML Engine** | Scikit-Learn | 1.3+ | Models, CV, Grid Search |
-| **📈 Statistics** | **Statsmodels** | **0.14+** | **OLS, P-Values (NEW)** |
+| **🤖 ML Engine** | Scikit-Learn | 1.3+ | Models, CV, Grid Search, **Forward Selection** |
+| **📈 Statistics** | Statsmodels | 0.14+ | OLS, P-Values, **Backward Elimination** |
 | **📉 Visualization** | Plotly | 5.18+ | Interactive charts |
 
 </div>
 
-### Dependency Graph
+### Dual Library Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                          TECHNOLOGY INTEGRATION                                 │
+│                      FEATURE SELECTION SUITE: DUAL ENGINE                       │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│                              ┌──────────────┐                                   │
-│                              │  STREAMLIT   │                                   │
-│                              │   (UI/UX)    │                                   │
-│                              └──────┬───────┘                                   │
+│                         ┌─────────────────────────┐                             │
+│                         │   FEATURE SELECTION     │                             │
+│                         │        SUITE            │                             │
+│                         └───────────┬─────────────┘                             │
 │                                     │                                           │
-│                    ┌────────────────┼────────────────┐                          │
-│                    │                │                │                          │
-│                    ▼                ▼                ▼                          │
-│            ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                    │
-│            │SCIKIT-LEARN │  │ STATSMODELS │  │   PLOTLY    │                    │
-│            │             │  │    (NEW)    │  │             │                    │
-│            │ • Models    │  │ • OLS       │  │ • Charts    │                    │
-│            │ • CV        │  │ • P-Values  │  │ • Heatmaps  │                    │
-│            │ • GridSearch│  │ • Inference │  │ • Interact  │                    │
-│            └──────┬──────┘  └──────┬──────┘  └─────────────┘                    │
-│                   │                │                                            │
-│                   └────────┬───────┘                                            │
-│                            │                                                    │
-│                            ▼                                                    │
-│                    ┌─────────────┐                                              │
-│                    │   PANDAS    │                                              │
-│                    │   NUMPY     │                                              │
-│                    │  (Data I/O) │                                              │
-│                    └─────────────┘                                              │
+│                    ┌────────────────┴────────────────┐                          │
+│                    │                                 │                          │
+│                    ▼                                 ▼                          │
+│          ┌─────────────────┐               ┌─────────────────┐                  │
+│          │   🔙 BACKWARD   │               │   🔜 FORWARD    │                  │
+│          │   ELIMINATION   │               │   SELECTION     │                  │
+│          └────────┬────────┘               └────────┬────────┘                  │
+│                   │                                 │                           │
+│                   ▼                                 ▼                           │
+│          ┌─────────────────┐               ┌─────────────────┐                  │
+│          │  STATSMODELS    │               │  SCIKIT-LEARN   │                  │
+│          │                 │               │                 │                  │
+│          │  • sm.OLS()     │               │  • LinearReg()  │                  │
+│          │  • .pvalues     │               │  • r2_score()   │                  │
+│          │  • Inference    │               │  • Prediction   │                  │
+│          └─────────────────┘               └─────────────────┘                  │
+│                                                                                 │
+│          ═══════════════════════════════════════════════════════                │
+│                                                                                 │
+│          WHY BOTH LIBRARIES?                                                    │
+│                                                                                 │
+│          Statsmodels:  Statistical inference (P-Values, confidence intervals)  │
+│          Scikit-Learn: Predictive performance (R², cross-validation scores)    │
+│                                                                                 │
+│          Together: Complete feature selection toolkit                           │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -654,16 +594,16 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### requirements.txt (v3.4)
+### requirements.txt (v3.5)
 
 ```
 streamlit>=1.28.0
-scikit-learn>=1.3.0
+scikit-learn>=1.3.0       # Forward Selection (R² calculation)
+statsmodels>=0.14.0       # Backward Elimination (P-Value calculation)
 pandas>=2.0.0
 numpy>=1.24.0
 plotly>=5.18.0
 matplotlib>=3.7.0
-statsmodels>=0.14.0    # NEW: Required for Feature Selection Lab
 ```
 
 ### Step 4: Verify Installation
@@ -676,7 +616,8 @@ import statsmodels
 import plotly
 
 print('✅ All dependencies installed!')
-print(f'   Statsmodels: {statsmodels.__version__}')  # Verify new dependency
+print(f'   Scikit-Learn: {sklearn.__version__} (Forward Selection)')
+print(f'   Statsmodels: {statsmodels.__version__} (Backward Elimination)')
 "
 ```
 
@@ -692,22 +633,60 @@ Navigate to `http://localhost:8501` in your browser.
 
 ## 📖 User Guide
 
-### Using the Feature Selection Lab
+### Using the Feature Selection Suite
 
-1. **Navigate** to **🗑️ Feature Selection Lab** in the sidebar
+#### 🔙 Tab 1: Backward Elimination
+
+1. **Navigate** to **🎯 Feature Selection Suite** → **🔙 Backward Elimination**
 2. **Observe** the synthetic dataset with mixed features
 3. **Click** "Run Backward Elimination"
-4. **Watch** the Elimination Log update round-by-round
-5. **Review** the Final Significance Check graph
+4. **Watch** the Elimination Log as garbage features are dropped
+5. **Review** the Final Significance Check (P-Value chart)
+
+#### 🔜 Tab 2: Forward Selection
+
+1. **Switch** to **🔜 Forward Selection** tab
+2. **Click** "Run Forward Selection"
+3. **Watch** the R² Growth Chart build step-by-step
+4. **Identify** steep jumps (real signals) vs flat lines (noise)
+5. **Compare** results with Backward Elimination
 
 ### Interpreting Results
 
-| Result | Meaning | Insight |
-|--------|---------|---------|
-| **Feature Dropped** | P-Value > 0.05 | No statistical relationship with target |
-| **Feature Kept** | P-Value < 0.05 | Significant predictor |
-| **Tiny P-Value Bar** | P-Value << 0.001 | Extremely strong predictor |
-| **Multiple Survivors** | Several P < 0.05 | Multi-factor model appropriate |
+| Visualization | What to Look For | Meaning |
+|---------------|------------------|---------|
+| **Elimination Log** | Features dropped with P > 0.05 | Garbage removed |
+| **P-Value Chart** | Tiny bars (P << 0.05) | Highly significant features |
+| **R² Growth Chart** | Steep jumps | Real signal found |
+| **R² Growth Chart** | Flat segments | Noise rejected |
+
+### Expected Outcome
+
+Both methods should converge on the same (or very similar) optimal feature set:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                          CONVERGENCE EXAMPLE                                    │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│  Dataset: Predicting Exam Scores                                                │
+│                                                                                 │
+│  Features Available:                                                            │
+│    • Study_Hours (REAL)                                                         │
+│    • Shoe_Size (NOISE)                                                          │
+│    • Jersey_Number (NOISE)                                                      │
+│    • Favorite_Color (NOISE)                                                     │
+│                                                                                 │
+│  🔙 Backward Elimination Result:     🔜 Forward Selection Result:               │
+│     Selected: [Study_Hours]             Selected: [Study_Hours]                 │
+│     Dropped: [Shoe_Size,                Rejected: [Shoe_Size,                   │
+│               Jersey_Number,                       Jersey_Number,               │
+│               Favorite_Color]                      Favorite_Color]              │
+│                                                                                 │
+│  ✅ BOTH METHODS AGREE: Only Study_Hours matters!                               │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -754,24 +733,26 @@ This application is developed **exclusively for educational and demonstration pu
 | v3.1 | Visual Basics | 4 | Core algorithms |
 | v3.2 | Reliability Engineering | 5 | Cross-Validation |
 | v3.3 | Automation Update | 6 | Grid Search |
-| **v3.4** | **Feature Engineering** | **7** | **Backward Elimination** |
+| v3.4 | Feature Engineering | 7 | Backward Elimination |
+| **v3.5** | **Selection Suite** | **7** | **+ Forward Selection** |
 
 ---
 
-**Built with 🧠 statistics, 🗑️ garbage collection, and ☕ persistence**
+**Built with 🔙 elimination, 🔜 selection, and ☕ persistence**
 
-*The Machine Learning Workbench v3.4 — Separating Signal from Noise*
+*The Machine Learning Workbench v3.5 — Two Paths to the Truth*
 
 ---
 
 ```
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
-║   "In God we trust. All others must bring data... and significant P-Values." ║
+║   "Whether you remove the garbage or recruit the talent,                      ║
+║    the destination is the same: a model that truly understands the data."    ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,9,5&height=100&section=footer)
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer)
 
 </div>
